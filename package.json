@@ -1,0 +1,16 @@
+{
+  "name": "daum.maps.d.ts",
+  "version": "0.0.1",
+  "description": "Daum Map API Type Definitions",
+  "license": "MIT",
+  "private": true,
+  "types": "index.d.ts",
+  "bugs": {
+    "url": "https://github.com/Musma/daum.maps.d.ts/issues",
+    "email": "hyeonsoo.david.lee@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Musma/daum.maps.d.ts.git"
+  }
+}
