@@ -2121,6 +2121,11 @@ declare namespace daum.maps.services {
 
   export enum CategoryGroupCode {
     /**
+     * 코드 미부여
+     */
+    BLANK = '',
+    
+    /**
      * 대형마트
      */
     MT1 = 'MT1',
