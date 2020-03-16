@@ -393,6 +393,23 @@ declare namespace daum.maps {
     constructor(sw?: LatLng, ne?: LatLng)
 
     /**
+     * 객체가 가지고 있는 영역 정보와 같은 영역 정보를 가지고 있는 객체인지 비교한다.
+     * 
+     * @param latlng
+     */
+    public equals(latlngBounds: LatLngBounds): boolean
+
+    /**
+     * 객체가 가지고 있는 영역 정보를 문자열로 반환한다.
+     */
+    public toString(): string
+
+    /**
+     * 영역 정ㅈ보가 비어있는지 확인한다.
+     */
+    public isEmpty():boolean
+
+    /**
      * 영역의 남서쪽 좌표를 반환한다.
      */
     public getSouthWest(): LatLng
