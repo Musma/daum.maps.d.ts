@@ -405,7 +405,7 @@ declare namespace daum.maps {
     public toString(): string
 
     /**
-     * 영역 정ㅈ보가 비어있는지 확인한다.
+     * 영역 정보가 비어있는지 확인한다.
      */
     public isEmpty():boolean
 
