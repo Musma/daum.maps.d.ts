@@ -390,7 +390,7 @@ declare namespace daum.maps {
      * @param sw 사각 영역에서 남서쪽 좌표
      * @param ne 사각 영역에서 북동쪽 좌표
      */
-    constructor(sw: LatLng, ne: LatLng)
+    constructor(sw?: LatLng, ne?: LatLng)
 
     /**
      * 영역의 남서쪽 좌표를 반환한다.
