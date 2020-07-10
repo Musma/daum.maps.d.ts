@@ -390,7 +390,24 @@ declare namespace daum.maps {
      * @param sw 사각 영역에서 남서쪽 좌표
      * @param ne 사각 영역에서 북동쪽 좌표
      */
-    constructor(sw: LatLng, ne: LatLng)
+    constructor(sw?: LatLng, ne?: LatLng)
+
+    /**
+     * 객체가 가지고 있는 영역 정보와 같은 영역 정보를 가지고 있는 객체인지 비교한다.
+     * 
+     * @param latlng
+     */
+    public equals(latlngBounds: LatLngBounds): boolean
+
+    /**
+     * 객체가 가지고 있는 영역 정보를 문자열로 반환한다.
+     */
+    public toString(): string
+
+    /**
+     * 영역 정보가 비어있는지 확인한다.
+     */
+    public isEmpty():boolean
 
     /**
      * 영역의 남서쪽 좌표를 반환한다.
