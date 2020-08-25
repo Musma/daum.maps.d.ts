@@ -691,6 +691,16 @@ declare namespace daum.maps {
     level?: number
 
     /**
+     * 지도의 최소 레벨 값
+     */
+    minLevel?: number
+
+    /**
+     * 지도의 최고 레벨 값
+     */
+    maxLevel?: number
+
+    /**
      * 지도 종류 (기본값: 일반 지도)
      */
     mapTypeId?: MapTypeId
