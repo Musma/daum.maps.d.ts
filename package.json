@@ -1,7 +1,7 @@
 {
-  "name": "daum.maps.d.ts",
+  "name": "kakao.maps.d.ts",
   "version": "0.0.1",
-  "description": "Daum Map API Type Definitions",
+  "description": "Kakao Map API Type Definitions",
   "license": "MIT",
   "private": true,
   "types": "index.d.ts",

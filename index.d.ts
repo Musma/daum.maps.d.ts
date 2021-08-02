@@ -1,15 +1,15 @@
-// Type definitions for daum-map-api v3
+// Type definitions for kakao-map-api v3
 // Project: http://apis.map.kakao.com/web/documentation/
 // Definitions by: Hyeonsoo David Lee <https://github.com/civilizeddev>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare namespace daum.maps {
+declare namespace kakao.maps {
   // Core
 
   /**
    * @see [Circle](http://apis.map.kakao.com/web/documentation/#Circle)
    */
-  export class Circle implements daum.maps.event.EventTarget {
+  export class Circle implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 원을 생성한다.
      *
@@ -200,7 +200,7 @@ declare namespace daum.maps {
   /**
    * @see [CustomOverlay](http://apis.map.kakao.com/web/documentation/#CustomOverlay)
    */
-  export class CustomOverlay implements daum.maps.event.EventTarget {
+  export class CustomOverlay implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 커스텀 오버레이를 생성한다.
      * 지도 뿐만 아니라 로드뷰 위에도 올릴 수 있다.
@@ -394,7 +394,7 @@ declare namespace daum.maps {
 
     /**
      * 객체가 가지고 있는 영역 정보와 같은 영역 정보를 가지고 있는 객체인지 비교한다.
-     * 
+     *
      * @param latlng
      */
     public equals(latlngBounds: LatLngBounds): boolean
@@ -437,7 +437,7 @@ declare namespace daum.maps {
   /**
    * @see [Map](http://apis.map.kakao.com/web/documentation/#Map)
    */
-  export class Map implements daum.maps.event.EventTarget {
+  export class Map implements kakao.maps.event.EventTarget {
     /**
      * 지도를 생성한다.
      *
@@ -614,7 +614,7 @@ declare namespace daum.maps {
     /**
      * 지도의 projectionId를 지정한다.
      * 이 메소드로 API 내부의 좌표계의 투영 방법을 설정할 수 있다.
-     * 기본값은 daum.maps.ProjectionId.WCONG
+     * 기본값은 kakao.maps.ProjectionId.WCONG
      *
      * @param projectionId
      */
@@ -716,7 +716,7 @@ declare namespace daum.maps {
     disableDoubleClickZoom?: boolean
 
     /**
-     * 투영법 지정 (기본값: daum.maps.ProjectionId.WCONG)
+     * 투영법 지정 (기본값: kakao.maps.ProjectionId.WCONG)
      */
     projectionId?: string
 
@@ -833,7 +833,7 @@ declare namespace daum.maps {
   /**
    * @see [Marker](http://apis.map.kakao.com/web/documentation/#Marker)
    */
-  export class Marker implements daum.maps.event.EventTarget {
+  export class Marker implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 마커를 생성한다.
      * 지도 뿐만 아니라 로드뷰 위에도 올릴 수 있다.
@@ -1088,7 +1088,7 @@ declare namespace daum.maps {
   /**
    * @see [MarkerClusterer](http://apis.map.kakao.com/web/documentation/#MarkerClusterer)
    */
-  export class MarkerClusterer implements daum.maps.event.EventTarget {
+  export class MarkerClusterer implements kakao.maps.event.EventTarget {
     /**
      * 마커 클러스터링을 담당하는 객체.
      * clusterer 라이브러리를 별도 로드 해야 사용 가능하다.
@@ -1335,7 +1335,7 @@ declare namespace daum.maps {
 
     /**
      * 저장한 페이지를 검색한다.
-     * 
+     *
      * @param page 페이지 번호
      */
     public gotoPage(page: number): void;
@@ -1399,7 +1399,7 @@ declare namespace daum.maps {
   /**
    * @see [Polygon](http://apis.map.kakao.com/web/documentation/#Polygon)
    */
-  export class Polygon implements daum.maps.event.EventTarget {
+  export class Polygon implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 다각형을 생성한다.
      *
@@ -1510,7 +1510,7 @@ declare namespace daum.maps {
    *
    * @see [Polyline](http://apis.map.kakao.com/web/documentation/#Polyline)
    */
-  export class Polyline implements daum.maps.event.EventTarget {
+  export class Polyline implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 폴리라인을 생성한다.
      *
@@ -1607,7 +1607,7 @@ declare namespace daum.maps {
   /**
    * @see [Rectangle](http://apis.map.kakao.com/web/documentation/#Rectangle)
    */
-  export class Rectangle implements daum.maps.event.EventTarget {
+  export class Rectangle implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 사각형를 생성한다.
      *
@@ -1772,7 +1772,7 @@ declare namespace daum.maps {
 /**
  * 지도 객체의 이벤트 관련 함수를 담은 네임스페이스
  */
-declare namespace daum.maps.event {
+declare namespace kakao.maps.event {
   /**
    * 이벤트를 지원하는 다음 지도 API 객체
    */
@@ -1842,7 +1842,7 @@ declare namespace daum.maps.event {
 /**
  * 장소 검색 및 주소-좌표 간 변환 서비스를 포함하고 있다.
  */
-declare namespace daum.maps.services {
+declare namespace kakao.maps.services {
   /**
    * 좌표 변환을 지원하는 좌표계가 상수로 정의되어 있다.
    * 좌표 변환( transCoord )에서 변환을 위해,
@@ -2141,7 +2141,7 @@ declare namespace daum.maps.services {
      * 코드 미부여
      */
     BLANK = '',
-    
+
     /**
      * 대형마트
      */
