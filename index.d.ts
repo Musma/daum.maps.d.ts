@@ -1737,7 +1737,7 @@ declare namespace kakao.maps {
      * @param container 로드뷰가 표시될 HTML element
      * @param options
      */
-    constructor(container: HTMLElement, options: RoadviewOptions);
+    constructor(container: HTMLElement, options?: RoadviewOptions);
 
     /**
      * 파노라마 ID를 지정한다.
