@@ -215,7 +215,7 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null /* | RoadView */): void;
+    public setMap(map: Map | Roadview | null): void;
 
     /**
      * 커스텀 오버레이가 올라가있는 지도를 반환한다.
@@ -229,7 +229,7 @@ declare namespace kakao.maps {
      *
      * @param position
      */
-    public setPosition(position: LatLng /* | ViewPoint */): void;
+    public setPosition(position: LatLng | Viewpoint): void;
 
     /**
      * 커스텀 오버레이의 좌표를 반환한다.
@@ -317,12 +317,12 @@ declare namespace kakao.maps {
     /**
      * 커스텀 오버레이가 올라갈 지도 또는 로드뷰
      */
-    map?: Map /* | RoadView */;
+    map?: Roadview | Map;
 
     /**
      * 커스텀 오버레이의 좌표 또는 로드뷰에서의 시점
      */
-    position: LatLng /* | ViewPoint */;
+    position: LatLng | Viewpoint;
 
     /**
      * 컨텐츠의 x축 위치. 0_1 사이의 값을 가진다. 기본값은 0.5
@@ -874,7 +874,7 @@ declare namespace kakao.maps {
      *
      * @param position
      */
-    public setPosition(position: LatLng /* | ViewPoint */): void;
+    public setPosition(position: LatLng | Viewpoint): void;
 
     /**
      * 마커의 좌표를 반환한다.
@@ -1834,17 +1834,53 @@ declare namespace kakao.maps {
     constructor(pan: number, tilt: number, zoom: number, panoId?: number);
   }
 
-  // Miscellaneous
+  /**
+   * @see [RoadviewClient](https://apis.map.kakao.com/web/documentation/#RoadviewClient)
+   */
+  export class RoadviewClient {
+    /**
+     * 특정 좌표 근처의 파노라마 ID 등 로드뷰와 관련된 데이터를 다룬다.
+     */
+    constructor();
+
+    /**
+     * 특정 좌표에서 반경 내 가장 가까운 로드뷰 파노라마 ID를 구한다.
+     * @param position
+     * @param radius
+     * @param callback
+     */
+    getNearestPanoId(
+      position: LatLng,
+      radius: number,
+      callback: Function
+    ): number;
+  }
 
   /**
-   * v3 스크립트를 동적으로 로드하기위해 사용한다.
-   * 스크립트의 로딩이 끝나기 전에 v3의 객체에 접근하려고 하면 에러가 발생하기 때문에
-   * 로딩이 끝나는 시점에 콜백을 통해 객체에 접근할 수 있도록 해 준다.
-   * 비동기 통신으로 페이지에 v3를 동적으로 삽입할 경우에 주로 사용된다.
-   * v3 로딩 스크립트 주소에 파라메터로 autoload=false 를 지정해 주어야 한다.
+   * @see [RoadviewOverlay](https://apis.map.kakao.com/web/documentation/#RoadviewOverlay)
    *
-   * @see [load](http://apis.map.kakao.com/web/documentation/#load)
+   * 로드뷰가 존재하는 경로를 표시하는 선이 그려진 오버레이
    */
+  export class RoadviewOverlay {
+    /**
+     * 지도 위에 로드뷰 선이 그려진 타일을 올린다.
+     */
+    constructor();
+
+    /**
+     * 지도에 로드뷰 선을 그린다.
+     * null 을 지정하면 선을 제거한다.
+     * @param map
+     */
+    setMap(map: Map | null): void;
+
+    /**
+     * 로드뷰 선이 그려져있는 지도를 반환한다.
+     * @param map
+     */
+    getMap(): Map;
+  }
+
   export function load(callback: () => void): void;
 
   /**
