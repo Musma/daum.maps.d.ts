@@ -1727,6 +1727,113 @@ declare namespace kakao.maps {
     public toString(): string;
   }
 
+  /**
+   * @see [Roadview](http://apis.map.kakao.com/web/documentation/#Roadview)
+   */
+  export class Roadview implements kakao.maps.event.EventTarget {
+    /**
+     * 로드뷰를 생성한다.
+     *
+     * @param container 로드뷰가 표시될 HTML element
+     * @param options
+     */
+    constructor(container: HTMLElement, options: RoadviewOptions);
+
+    /**
+     * 파노라마 ID를 지정한다.
+     * 지도 좌표도 함께 넘겨야 한다.
+     *
+     * @param panoId
+     * @param position
+     */
+    setPanoId(panoId: number, position: LatLng): void;
+
+    /**
+     * 파노라마 ID를 반환한다.
+     */
+    getPanoId(): number;
+
+    /**
+     * 로드뷰 시점을 지정한다.
+     *
+     * @param viewpoint
+     */
+    setViewpoint(viewpoint: Viewpoint): void;
+
+    /**
+     * 로드뷰 시점을 반환한다.
+     */
+    getViewpoint(): Viewpoint;
+
+    /**
+     * 로드뷰 시점과panoId를 함께 반환한다.
+     */
+    getViewpointWithPanoId(): Viewpoint & { panoId: number };
+
+    /**
+     * 로드뷰가 보여주는 지점의 지도 좌표를 반환한다.
+     */
+    getPosition(): LatLng;
+
+    /**
+     * 로드뷰 엘리먼트의 크기를 변경한 후에는 반드시 이 함수를 호출해야 한다.
+     * 플래시 로드뷰는 자동으로 영역을 잡는 경우가 있으나 모바일 로드뷰는 꼭 호출하도록 하자.
+     * 단, window의 resize 이벤트에 대해서는 자동으로 호출된다.
+     */
+    relayout(): void;
+  }
+
+  export interface RoadviewOptions {
+    /**
+     * 로드뷰 시작 지역의 고유 아이디 값.
+     */
+    panoId?: number;
+
+    /**
+     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수평 좌표값.
+     */
+    panoX?: number;
+
+    /**
+     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수직 좌표값.
+     */
+    panoY?: number;
+
+    /**
+     * 로드뷰 처음 실행시에 바라봐야 할 수평 각. 0이 정북방향. (0_360)
+     */
+    pan?: number;
+
+    /**
+     * 로드뷰 처음 실행시에 바라봐야 할 수직 각.(-90_90)
+     */
+    tilt?: number;
+
+    /**
+     * 로드뷰 줌 초기값.(-3_3)
+     */
+    zoom?: number;
+  }
+
+  /**
+   * @see [Viewpoint](https://apis.map.kakao.com/web/documentation/#Viewpoint)
+   */
+  export class Viewpoint {
+    pan: number;
+    tilt: number;
+    zoom: number;
+    panoId?: number;
+
+    /**
+     * 로드뷰를 생성한다.
+     * @param pan 가로 각도, 0부터 360 사이의 값으로 북쪽부터 시계방향으로 대응한다.
+     * @param tilt 세로 각도, -90부터 90 사이의 값으로 위쪽부터 아래쪽으로 대응한다.
+     * @param zoom 확대 수준, -3부터 3 사이의 정수이다.
+     * @param panoId 특정 위치의 로드뷰 고유의 아이디 값
+     */
+    constructor(pan: number, tilt: number, zoom: number, panoId?: number);
+  }
+
   // Miscellaneous
 
   /**
@@ -2231,112 +2338,5 @@ declare namespace kakao.maps.services {
      * 약국
      */
     PM9 = "PM9",
-  }
-
-  /**
-   * @see [Roadview](http://apis.map.kakao.com/web/documentation/#Roadview)
-   */
-  export class Roadview implements kakao.maps.event.EventTarget {
-    /**
-     * 로드뷰를 생성한다.
-     *
-     * @param container 로드뷰가 표시될 HTML element
-     * @param options
-     */
-    constructor(container: HTMLElement, options: RoadviewOptions);
-
-    /**
-     * 파노라마 ID를 지정한다.
-     * 지도 좌표도 함께 넘겨야 한다.
-     *
-     * @param panoId
-     * @param position
-     */
-    setPanoId(panoId: number, position: LatLng): void;
-
-    /**
-     * 파노라마 ID를 반환한다.
-     */
-    getPanoId(): number;
-
-    /**
-     * 로드뷰 시점을 지정한다.
-     *
-     * @param viewpoint
-     */
-    setViewpoint(viewpoint: Viewpoint): void;
-
-    /**
-     * 로드뷰 시점을 반환한다.
-     */
-    getViewpoint(): Viewpoint;
-
-    /**
-     * 로드뷰 시점과panoId를 함께 반환한다.
-     */
-    getViewpointWithPanoId(): Viewpoint & { panoId: number };
-
-    /**
-     * 로드뷰가 보여주는 지점의 지도 좌표를 반환한다.
-     */
-    getPosition(): LatLng;
-
-    /**
-     * 로드뷰 엘리먼트의 크기를 변경한 후에는 반드시 이 함수를 호출해야 한다.
-     * 플래시 로드뷰는 자동으로 영역을 잡는 경우가 있으나 모바일 로드뷰는 꼭 호출하도록 하자.
-     * 단, window의 resize 이벤트에 대해서는 자동으로 호출된다.
-     */
-    relayout(): void;
-  }
-
-  export interface RoadviewOptions {
-    /**
-     * 로드뷰 시작 지역의 고유 아이디 값.
-     */
-    panoId?: number;
-
-    /**
-     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수평 좌표값.
-     */
-    panoX?: number;
-
-    /**
-     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수직 좌표값.
-     */
-    panoY?: number;
-
-    /**
-     * 로드뷰 처음 실행시에 바라봐야 할 수평 각. 0이 정북방향. (0_360)
-     */
-    pan?: number;
-
-    /**
-     * 로드뷰 처음 실행시에 바라봐야 할 수직 각.(-90_90)
-     */
-    tilt?: number;
-
-    /**
-     * 로드뷰 줌 초기값.(-3_3)
-     */
-    zoom?: number;
-  }
-
-  /**
-   * @see [Viewpoint](https://apis.map.kakao.com/web/documentation/#Viewpoint)
-   */
-  export class Viewpoint {
-    pan: number;
-    tilt: number;
-    zoom: number;
-    panoId?: number;
-
-    /**
-     * 로드뷰를 생성한다.
-     * @param pan 가로 각도, 0부터 360 사이의 값으로 북쪽부터 시계방향으로 대응한다.
-     * @param tilt 세로 각도, -90부터 90 사이의 값으로 위쪽부터 아래쪽으로 대응한다.
-     * @param zoom 확대 수준, -3부터 3 사이의 정수이다.
-     * @param panoId 특정 위치의 로드뷰 고유의 아이디 값
-     */
-    constructor(pan: number, tilt: number, zoom: number, panoId?: number);
   }
 }
