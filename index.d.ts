@@ -15,7 +15,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: CircleOptions)
+    constructor(options: CircleOptions);
 
     /**
      * 지도에 원을 올린다.
@@ -23,105 +23,105 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 원이 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 원의 옵션을 설정한다.
      */
-    public setOptions(options: CircleOptions): void
+    public setOptions(options: CircleOptions): void;
 
     /**
      * 원의 중심 좌표를 지정한다.
      *
      * @param position
      */
-    public setPosition(position: LatLng): void
+    public setPosition(position: LatLng): void;
 
     /**
      * 원 중심의 좌표를 반환한다.
      */
-    public getPosition(): LatLng
+    public getPosition(): LatLng;
 
     /**
      * 원의 반지름을 m(미터)단위로 지정한다.
      *
      * @param radius
      */
-    public setRadius(radius: number): void
+    public setRadius(radius: number): void;
 
     /**
      * 원의 반지름을 반환한다.
      */
-    public getRadius(): number
+    public getRadius(): number;
 
     /**
      * 원을 포함하는 최소의 사각형 영역을 구한다.
      */
-    public getBounds(): LatLngBounds
+    public getBounds(): LatLngBounds;
 
     /**
      * 원의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 원의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
   }
 
   export interface CircleOptions {
     /**
      * 중심 좌표
      */
-    center: LatLng
+    center: LatLng;
 
     /**
      * #xxxxxx 형태의 채움 색 (기본값: ‘#F10000’)
      */
-    fillColor?: string
+    fillColor?: string;
 
     /**
      * 채움 불투명도 (0-1) (기본값: 0)
      */
-    fillOpacity?: number
+    fillOpacity?: number;
 
     /**
      * 미터 단위의 반지름
      */
-    radius: number
+    radius: number;
 
     /**
      * 픽셀 단위의 선 두께 (기본값: 3)
      */
-    strokeWeight?: number
+    strokeWeight?: number;
 
     /**
      * #xxxxxx 형태의 선 색 (기본값: ‘#F10000’)
      */
-    strokeColor?: string
+    strokeColor?: string;
 
     /**
      * 선 불투명도 (0-1) (기본값: 0.6)
      */
-    strokeOpacity?: number
+    strokeOpacity?: number;
 
     /**
      * 선 스타일 (기본값: ‘solid’)
      */
-    strokeStyle?: StrokeStyles
+    strokeStyle?: StrokeStyles;
 
     /**
      * 원의 z-index 속성 값
      */
-    zIndex?: number
+    zIndex?: number;
   }
 
   /**
@@ -133,28 +133,28 @@ declare namespace kakao.maps {
     /**
      * 클러스터의 좌표를 반환한다.
      */
-    getCenter(): LatLng
+    getCenter(): LatLng;
 
     /**
      * 클러스터의 영역을 반환한다.
      */
-    getBounds(): LatLngBounds
+    getBounds(): LatLngBounds;
 
     /**
      * 클러스터에 포함된 마커의 개수를 반환한다.
      */
-    getSize(): number
+    getSize(): number;
 
     /**
      * 클러스터에 포함된 마커들을 배열로 반환한다.
      */
-    getMarkers(): Marker[]
+    getMarkers(): Marker[];
 
     /**
      * 클러스터 오버레이를 반환한다.
      * 리턴값은 CustomOverlay 이다.
      */
-    getClusterMarker(): CustomOverlay
+    getClusterMarker(): CustomOverlay;
   }
 
   /**
@@ -167,34 +167,34 @@ declare namespace kakao.maps {
      * @param x
      * @param y
      */
-    constructor(x: number, y: number)
+    constructor(x: number, y: number);
 
     /**
      * x 좌표를 반환한다.
      */
-    public getX(): number
+    public getX(): number;
 
     /**
      * y 좌표를 반환한다.
      */
-    public getY(): number
+    public getY(): number;
 
     /**
      * 객체가 가지고 있는 좌표와 같은 좌표를 가지고 있는 객체인지 비교한다.
      *
      * @param coords
      */
-    public equals(coords: Coords): boolean
+    public equals(coords: Coords): boolean;
 
     /**
      * 객체가 가지고 있는 좌표를 문자열로 반환한다.
      */
-    public toString(): string
+    public toString(): string;
 
     /**
      * 객체가 가지고 있는 좌표를 WGS84 좌표로 반환한다.
      */
-    public toLatLng(): LatLng
+    public toLatLng(): LatLng;
   }
 
   /**
@@ -207,7 +207,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: CustomOverlayOptions)
+    constructor(options: CustomOverlayOptions);
 
     /**
      * 지도 또는 로드뷰에 커스텀 오버레이를 올린다.
@@ -215,12 +215,12 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null /* | RoadView */): void
+    public setMap(map: Map | null /* | RoadView */): void;
 
     /**
      * 커스텀 오버레이가 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 커스텀 오버레이의 좌표를 지정한다.
@@ -229,12 +229,12 @@ declare namespace kakao.maps {
      *
      * @param position
      */
-    public setPosition(position: LatLng /* | ViewPoint */): void
+    public setPosition(position: LatLng /* | ViewPoint */): void;
 
     /**
      * 커스텀 오버레이의 좌표를 반환한다.
      */
-    public getPosition(): LatLng
+    public getPosition(): LatLng;
 
     /**
      * 커스텀 오버레이의 내용을 지정한다.
@@ -242,36 +242,36 @@ declare namespace kakao.maps {
      *
      * @param content
      */
-    public setContent(content: HTMLElement | string): void
+    public setContent(content: HTMLElement | string): void;
 
     /**
      * 커스텀 오버레이의 내용을 지정했던 형태로 반환한다.
      */
-    public getContent(): HTMLElement | string
+    public getContent(): HTMLElement | string;
 
     /**
      * 커스텀 오버레이의 표시 여부를 지정한다.
      *
      * @param visible
      */
-    public setVisible(visible: boolean): void
+    public setVisible(visible: boolean): void;
 
     /**
      * 커스텀 오버레이의 표시 여부를 반환한다.
      */
-    public getVisible(): boolean
+    public getVisible(): boolean;
 
     /**
      * 커스텀 오버레이의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 커스텀 오버레이의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
 
     /**
      * 로드뷰상에서 커스텀 오버레이의 높이(위치)를 지정한다.
@@ -279,13 +279,13 @@ declare namespace kakao.maps {
      *
      * @param altitude
      */
-    public setAltitude(altitude: number): void
+    public setAltitude(altitude: number): void;
 
     /**
      * 커스텀 오버레이의 높이(위치)를 반환한다.
      * 단위는 m(미터).
      */
-    public getAltitude(): number
+    public getAltitude(): number;
 
     /**
      * 커스텀 오버레이의 가시반경을 설정한다.
@@ -294,50 +294,50 @@ declare namespace kakao.maps {
      *
      * @param range
      */
-    public setRange(range: number): void
+    public setRange(range: number): void;
 
     /**
      * 커스텀 오버레이의 가시반경을 반환한다.
      * 단위는 m(미터).
      */
-    public getRange(): number
+    public getRange(): number;
   }
 
   export interface CustomOverlayOptions {
     /**
      * true 로 설정하면 컨텐츠 영역을 클릭했을 경우 지도 이벤트를 막아준다.
      */
-    clickable?: boolean
+    clickable?: boolean;
 
     /**
      * 엘리먼트 또는 HTML 문자열 형태의 내용
      */
-    content?: HTMLElement | string
+    content?: HTMLElement | string;
 
     /**
      * 커스텀 오버레이가 올라갈 지도 또는 로드뷰
      */
-    map?: Map /* | RoadView */
+    map?: Map /* | RoadView */;
 
     /**
      * 커스텀 오버레이의 좌표 또는 로드뷰에서의 시점
      */
-    position: LatLng /* | ViewPoint */
+    position: LatLng /* | ViewPoint */;
 
     /**
      * 컨텐츠의 x축 위치. 0_1 사이의 값을 가진다. 기본값은 0.5
      */
-    xAnchor?: number
+    xAnchor?: number;
 
     /**
      * 컨텐츠의 y축 위치. 0_1 사이의 값을 가진다. 기본값은 0.5
      */
-    yAnchor?: number
+    yAnchor?: number;
 
     /**
      * 커스텀 오버레이의 z-index
      */
-    zIndex?: number
+    zIndex?: number;
   }
 
   /**
@@ -350,34 +350,34 @@ declare namespace kakao.maps {
      * @param latitude 위도
      * @param longitude 경도
      */
-    constructor(latitude: number, longitude: number)
+    constructor(latitude: number, longitude: number);
 
     /**
      * 위도를 반환한다.
      */
-    public getLat(): number
+    public getLat(): number;
 
     /**
      * 경도를 반환한다.
      */
-    public getLng(): number
+    public getLng(): number;
 
     /**
      * 객체가 가지고 있는 좌표와 같은 좌표를 가지고 있는 객체인지 비교한다.
      *
      * @param latlng
      */
-    public equals(latlng: LatLng): boolean
+    public equals(latlng: LatLng): boolean;
 
     /**
      * 객체가 가지고 있는 좌표를 문자열로 반환한다.
      */
-    public toString(): string
+    public toString(): string;
 
     /**
      * 객체가 가지고 있는 좌표를 Wcongnamul 좌표로 반환한다.
      */
-    public toCoords(): Coords
+    public toCoords(): Coords;
   }
 
   /**
@@ -390,48 +390,48 @@ declare namespace kakao.maps {
      * @param sw 사각 영역에서 남서쪽 좌표
      * @param ne 사각 영역에서 북동쪽 좌표
      */
-    constructor(sw?: LatLng, ne?: LatLng)
+    constructor(sw?: LatLng, ne?: LatLng);
 
     /**
      * 객체가 가지고 있는 영역 정보와 같은 영역 정보를 가지고 있는 객체인지 비교한다.
      *
      * @param latlng
      */
-    public equals(latlngBounds: LatLngBounds): boolean
+    public equals(latlngBounds: LatLngBounds): boolean;
 
     /**
      * 객체가 가지고 있는 영역 정보를 문자열로 반환한다.
      */
-    public toString(): string
+    public toString(): string;
 
     /**
      * 영역 정보가 비어있는지 확인한다.
      */
-    public isEmpty():boolean
+    public isEmpty(): boolean;
 
     /**
      * 영역의 남서쪽 좌표를 반환한다.
      */
-    public getSouthWest(): LatLng
+    public getSouthWest(): LatLng;
 
     /**
      * 영역의 북동쪽 좌표를 반환한다.
      */
-    public getNorthEast(): LatLng
+    public getNorthEast(): LatLng;
 
     /**
      * 인수로 주어진 좌표를 포함하도록 영역 정보를 확장한다.
      *
      * @param latlng
      */
-    public extend(latlng: LatLng): void
+    public extend(latlng: LatLng): void;
 
     /**
      * 영역 객체가 인수로 주어진 좌표를 포함하는지 확인한다.
      *
      * @param latlng
      */
-    public contain(latlng: LatLng): boolean
+    public contain(latlng: LatLng): boolean;
   }
 
   /**
@@ -444,19 +444,19 @@ declare namespace kakao.maps {
      * @param container 지도가 표시될 HTML element
      * @param options
      */
-    constructor(container: HTMLElement, options: MapOptions)
+    constructor(container: HTMLElement, options: MapOptions);
 
     /**
      * 지도의 중심 좌표를 설정한다.
      *
      * @param latlng
      */
-    public setCenter(latlng: LatLng): void
+    public setCenter(latlng: LatLng): void;
 
     /**
      * 지도의 중심 좌표를 반환한다.
      */
-    public getCenter(): LatLng
+    public getCenter(): LatLng;
 
     /**
      * 지도의 확대 수준을 설정한다.
@@ -479,31 +479,31 @@ declare namespace kakao.maps {
               /**
                * 애니메이션 효과 지속 시간 (단위: ms)
                */
-              duration: number
-            }
+              duration: number;
+            };
         /**
          * 지도 확대수준 변경 시 기준 좌표
          */
-        anchor: LatLng
-      },
-    ): void
+        anchor: LatLng;
+      }
+    ): void;
 
     /**
      * 지도의 확대 수준을 반환한다.
      */
-    public getLevel(): number
+    public getLevel(): number;
 
     /**
      * 지도의 타입을 설정한다.
      *
      * @param mapTypeId
      */
-    public setMapTypeId(mapTypeId: MapTypeId): void
+    public setMapTypeId(mapTypeId: MapTypeId): void;
 
     /**
      * 지도의 타입을 반환한다.
      */
-    public getMapTypeId(): MapTypeId
+    public getMapTypeId(): MapTypeId;
 
     /**
      * 주어진 영역이 화면 안에 전부 나타날 수 있도록 지도의 중심 좌표와 확대 수준을 설정한다.
@@ -523,13 +523,13 @@ declare namespace kakao.maps {
       paddingTop?: number,
       paddingRight?: number,
       paddingBottom?: number,
-      paddingLeft?: number,
-    ): void
+      paddingLeft?: number
+    ): void;
 
     /**
      * 지도의 영역을 반환한다.
      */
-    public getBounds(): LatLngBounds
+    public getBounds(): LatLngBounds;
 
     /**
      * 지도의 최저 레벨 값을 설정한다.
@@ -538,7 +538,7 @@ declare namespace kakao.maps {
      *
      * @param minLevel
      */
-    public setMinLevel(minLevel: number): void
+    public setMinLevel(minLevel: number): void;
 
     /**
      * 지도의 최고 레벨 값을 설정한다.
@@ -547,7 +547,7 @@ declare namespace kakao.maps {
      *
      * @param maxLevel
      */
-    public setMaxLevel(maxLevel: number): void
+    public setMaxLevel(maxLevel: number): void;
 
     /**
      * 중심 좌표를 지정한 픽셀 만큼 부드럽게 이동한다.
@@ -556,7 +556,7 @@ declare namespace kakao.maps {
      * @param dx
      * @param dy
      */
-    public panBy(dx: number, dy: number): void
+    public panBy(dx: number, dy: number): void;
 
     /**
      * 중심 좌표를 지정한 좌표 또는 영역으로 부드럽게 이동한다. 필요하면 확대 또는 축소도 수행한다.
@@ -568,8 +568,8 @@ declare namespace kakao.maps {
      */
     public panTo(
       latlng_or_bounds: LatLng | LatLngBounds,
-      padding?: number,
-    ): void
+      padding?: number
+    ): void;
 
     /**
      * 지도에 컨트롤을 추가한다.
@@ -591,12 +591,12 @@ declare namespace kakao.maps {
      *
      * @param draggable
      */
-    public setDraggable(draggable: boolean): void
+    public setDraggable(draggable: boolean): void;
 
     /**
      * 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 반환한다.
      */
-    public getDraggable(): boolean
+    public getDraggable(): boolean;
 
     /**
      * 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소 가능 여부를 설정한다.
@@ -604,12 +604,12 @@ declare namespace kakao.maps {
      *
      * @param zoomable
      */
-    public setZoomable(zoomable: boolean): void
+    public setZoomable(zoomable: boolean): void;
 
     /**
      * 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소 가능 여부를 반환한다.
      */
-    public getZoomable(): boolean
+    public getZoomable(): boolean;
 
     /**
      * 지도의 projectionId를 지정한다.
@@ -629,7 +629,7 @@ declare namespace kakao.maps {
      * 지도를 표시하는 HTML elemente의 크기를 변경한 후에는 반드시 이 함수를 호출해야 한다.
      * 단, window의 resize 이벤트에 대해서는 자동으로 호출한다.
      */
-    public relayout(): void
+    public relayout(): void;
 
     /**
      * 지도에 로드뷰, 교통정보 등의 오버레이 타입의 타일 이미지를 올린다.
@@ -637,26 +637,26 @@ declare namespace kakao.maps {
      *
      * @param mapTypeId
      */
-    public addOverlayMapTypeId(mapTypeId: MapTypeId): void
+    public addOverlayMapTypeId(mapTypeId: MapTypeId): void;
 
     /**
      * 지도에 로드뷰, 교통정보 등의 오버레이 타입의 타일 이미지를 삭제한다.
      *
      * @param mapTypeId
      */
-    public removeOverlayMapTypeId(mapTypeId: MapTypeId): void
+    public removeOverlayMapTypeId(mapTypeId: MapTypeId): void;
 
     /**
      * 키보드의 방향키와 +,-키로 지도 이동,확대,축소 가능여부를 설정한다.
      *
      * @param active
      */
-    public setKeyboardShortcuts(active: boolean): void
+    public setKeyboardShortcuts(active: boolean): void;
 
     /**
      * 키보드의 방향키와 +,-키로 지도 이동,확대,축소 가능여부를 반환한다.
      */
-    public getKeyboardShortcuts(): boolean
+    public getKeyboardShortcuts(): boolean;
 
     /**
      * copyright의 위치를 설정한다.
@@ -669,61 +669,61 @@ declare namespace kakao.maps {
     /**
      * 지도의 좌표 변환 객체를 반환한다.
      */
-    public getProjection(): MapProjection
+    public getProjection(): MapProjection;
 
     /**
      * 지도 위에 마우스 커서가 위치할 경우 보여지는 커서의 스타일을 지정한다.
      *
      * @param style
      */
-    public setCursor(style: string): void
+    public setCursor(style: string): void;
   }
 
   export interface MapOptions {
     /**
      * 중심 좌표 (필수)
      */
-    center: LatLng
+    center: LatLng;
 
     /**
      * 확대 수준 (기본값: 3)
      */
-    level?: number
+    level?: number;
 
     /**
      * 지도 종류 (기본값: 일반 지도)
      */
-    mapTypeId?: MapTypeId
+    mapTypeId?: MapTypeId;
 
     /**
      * 마우스 드래그, 휠, 모바일 터치를 이용한 시점 변경(이동, 확대, 축소) 가능 여부
      */
-    draggable?: boolean
+    draggable?: boolean;
 
     /**
      * 마우스 휠, 모바일 터치를 이용한 확대 및 축소 가능 여부
      */
-    scrollwheel?: boolean
+    scrollwheel?: boolean;
 
     /**
      * 더블클릭 이벤트 및 더블클릭 확대 가능 여부
      */
-    disableDoubleClick?: boolean
+    disableDoubleClick?: boolean;
 
     /**
      * 더블클릭 확대 가능 여부
      */
-    disableDoubleClickZoom?: boolean
+    disableDoubleClickZoom?: boolean;
 
     /**
      * 투영법 지정 (기본값: kakao.maps.ProjectionId.WCONG)
      */
-    projectionId?: string
+    projectionId?: string;
 
     /**
      * 지도 타일 애니메이션 설정 여부 (기본값: true)
      */
-    tileAnimation?: boolean
+    tileAnimation?: boolean;
 
     /**
      * 키보드의 방향키와 +, – 키로 지도 이동,확대,축소 가능 여부 (기본값: false)
@@ -734,8 +734,8 @@ declare namespace kakao.maps {
           /**
            * 지도 이동 속도
            */
-          speed: number
-        }
+          speed: number;
+        };
   }
 
   /**
@@ -748,7 +748,7 @@ declare namespace kakao.maps {
      *
      * @param latlng
      */
-    public pointFromCoords(latlng: LatLng): Point
+    public pointFromCoords(latlng: LatLng): Point;
 
     /**
      * 위치 좌표(pixel)에 해당하는 지도 좌표를 반환한다.
@@ -756,7 +756,7 @@ declare namespace kakao.maps {
      *
      * @param point
      */
-    public coordsFromPoint(point: Point): LatLng
+    public coordsFromPoint(point: Point): LatLng;
 
     /**
      * 지도 좌표에 해당하는 화면 좌표(pixel)를 반환한다.
@@ -764,7 +764,7 @@ declare namespace kakao.maps {
      *
      * @param latlng
      */
-    public containerPointFromCoords(latlng: LatLng): Point
+    public containerPointFromCoords(latlng: LatLng): Point;
 
     /**
      * 화면 좌표(pixel)에 해당하는 지도 좌표를 반환한다.
@@ -772,7 +772,7 @@ declare namespace kakao.maps {
      *
      * @param point
      */
-    public coordsFromContainerPoint(point: Point): LatLng
+    public coordsFromContainerPoint(point: Point): LatLng;
   }
 
   /**
@@ -840,7 +840,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: MarkerOptions)
+    constructor(options: MarkerOptions);
 
     /**
      * 지도 또는 로드뷰에 마커를 올린다.
@@ -848,24 +848,24 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 마커가 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 마커에 새 MarkerImage를 지정한다.
      *
      * @param image
      */
-    public setImage(image: MarkerImage): void
+    public setImage(image: MarkerImage): void;
 
     /**
      * 마커의 MarkerImage를 반환한다.
      */
-    public getImage(): MarkerImage | undefined
+    public getImage(): MarkerImage | undefined;
 
     /**
      * 마커의 좌표를 지정한다.
@@ -874,48 +874,48 @@ declare namespace kakao.maps {
      *
      * @param position
      */
-    public setPosition(position: LatLng /* | ViewPoint */): void
+    public setPosition(position: LatLng /* | ViewPoint */): void;
 
     /**
      * 마커의 좌표를 반환한다.
      */
-    public getPosition(): LatLng
+    public getPosition(): LatLng;
 
     /**
      * 마커의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 마커의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
 
     /**
      * 마커의 표시 여부를 지정한다.
      *
      * @param visible
      */
-    public setVisible(visible: boolean): void
+    public setVisible(visible: boolean): void;
 
     /**
      * 마커의 표시 여부를 반환한다.
      */
-    public getVisible(): boolean
+    public getVisible(): boolean;
 
     /**
      * 마커의 툴팁을 설정한다.
      *
      * @param title
      */
-    public setTitle(title: string): void
+    public setTitle(title: string): void;
 
     /**
      * 마커의 툴팁을 반환한다.
      */
-    public getTitle(): string
+    public getTitle(): string;
 
     /**
      * 드래그 가능 여부를 지정한다.
@@ -924,12 +924,12 @@ declare namespace kakao.maps {
      *
      * @param draggable
      */
-    public setDraggable(draggable: boolean): void
+    public setDraggable(draggable: boolean): void;
 
     /**
      * 드래그 가능 여부를 반환한다.
      */
-    public getDraggable(): boolean
+    public getDraggable(): boolean;
 
     /**
      * 클릭 가능 여부를 지정한다.
@@ -937,12 +937,12 @@ declare namespace kakao.maps {
      *
      * @param clickable
      */
-    public setClickable(clickable: boolean): void
+    public setClickable(clickable: boolean): void;
 
     /**
      * 클릭 가능 여부를 반환한다.
      */
-    public getClickable(): boolean
+    public getClickable(): boolean;
 
     /**
      * 로드뷰상에서 마커의 높이(위치)를 지정한다.
@@ -950,13 +950,13 @@ declare namespace kakao.maps {
      *
      * @param altitude
      */
-    public setAltitude(altitude: number): void
+    public setAltitude(altitude: number): void;
 
     /**
      * 마커의 높이(위치)를 반환한다.
      * 단위는 m(미터).
      */
-    public getAltitude(): number
+    public getAltitude(): number;
 
     /**
      * 마커의 가시반경을 설정한다.
@@ -965,77 +965,77 @@ declare namespace kakao.maps {
      *
      * @param range
      */
-    public setRange(range: number): void
+    public setRange(range: number): void;
 
     /**
      * 마커의 가시반경을 반환한다.
      * 단위는 m(미터).
      */
-    public getRange(): number
+    public getRange(): number;
 
     /**
      * 마커의 투명도를 설정한다. (0-1)
      *
      * @param opacity
      */
-    public setOpacity(opacity: number): void
+    public setOpacity(opacity: number): void;
 
     /**
      * 마커의 투명도를 반환한다.
      */
-    public getOpacity(): number
+    public getOpacity(): number;
   }
 
   export interface MarkerOptions {
     /**
      * 마커가 올라갈 지도 또는 로드뷰
      */
-    map?: Map
+    map?: Map;
 
     /**
      * 마커의 좌표 또는 로드뷰에서의 시점
      */
-    position: LatLng
+    position: LatLng;
 
     /**
      * 마커의 이미지
      */
-    image?: MarkerImage
+    image?: MarkerImage;
 
     /**
      * 마커 엘리먼트의 타이틀 속성 값 (툴팁)
      */
-    title?: string
+    title?: string;
 
     /**
      * 드래그 가능한 마커, 로드뷰에 올릴 경우에는 유효하지 않다.
      */
-    draggable?: boolean
+    draggable?: boolean;
 
     /**
      * 클릭 가능한 마커
      */
-    clickable?: boolean
+    clickable?: boolean;
 
     /**
      * 마커 엘리먼트의 z-index 속성 값
      */
-    zIndex?: number
+    zIndex?: number;
 
     /**
      * 마커 투명도 (0-1)
      */
-    opacity?: number
+    opacity?: number;
 
     /**
      * 로드뷰에 올라있는 마커의 높이 값(m 단위)
      */
-    altitude?: number
+    altitude?: number;
 
     /**
      * 로드뷰 상에서 마커의 가시반경(m 단위), 두 지점 사이의 거리가 지정한 값보다 멀어지면 마커는 로드뷰에서 보이지 않게 된다.
      */
-    range?: number
+    range?: number;
   }
 
   /**
@@ -1050,39 +1050,39 @@ declare namespace kakao.maps {
      * @param size 마커의 크기
      * @param options
      */
-    constructor(src: string, size: Size, options?: MarkerImageOptions)
+    constructor(src: string, size: Size, options?: MarkerImageOptions);
   }
 
   export interface MarkerImageOptions {
     /**
      * 마커 이미지의 alt 속성값을 정의한다.
      */
-    alt?: string
+    alt?: string;
 
     /**
      * 마커의 클릭 또는 마우스오버 가능한 영역을 표현하는 좌표값
      */
-    coords?: string
+    coords?: string;
 
     /**
      * 마커의 좌표에 일치시킬 이미지 안의 좌표 (기본값: 이미지의 가운데 아래)
      */
-    offset?: Point
+    offset?: Point;
 
     /**
      * 마커의 클릭 또는 마우스오버 가능한 영역의 모양
      */
-    shape?: string
+    shape?: string;
 
     /**
      * 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
      */
-    spriteOrigin?: Point
+    spriteOrigin?: Point;
 
     /**
      * 스프라이트 이미지의 전체 크기
      */
-    spriteSize?: Size
+    spriteSize?: Size;
   }
 
   /**
@@ -1096,7 +1096,7 @@ declare namespace kakao.maps {
      * @see [마커 클러스터러 사용하기 샘플보기](http://apis.map.kakao.com/web/sample/basicClusterer/)
      * @param options
      */
-    constructor(options: MarkerClustererOptions)
+    constructor(options: MarkerClustererOptions);
 
     /**
      * 클러스터에 마커 하나를 추가한다.
@@ -1104,7 +1104,7 @@ declare namespace kakao.maps {
      * @param marker 추가할 마커
      * @param nodraw 클러스터 redraw 여부. true인 경우 클러스터를 다시 그리지 않는다.
      */
-    addMarker(marker: Marker, nodraw?: boolean): void
+    addMarker(marker: Marker, nodraw?: boolean): void;
 
     /**
      * 클러스터에 추가된 마커 중 하나를 삭제한다.
@@ -1112,7 +1112,7 @@ declare namespace kakao.maps {
      * @param marker 삭제할 마커
      * @param nodraw 클러스터 redraw 여부. true인 경우 클러스터를 다시 그리지 않는다.
      */
-    removeMarker(marker: Marker, nodraw?: boolean): void
+    removeMarker(marker: Marker, nodraw?: boolean): void;
 
     /**
      * 여러개의 마커를 추가한다.
@@ -1120,7 +1120,7 @@ declare namespace kakao.maps {
      * @param markers 추가할 마커 객체 배열
      * @param nodraw 클러스터 redraw 여부. true인 경우 클러스터를 다시 그리지 않는다.
      */
-    addMarkers(markers: Marker[], nodraw?: boolean): void
+    addMarkers(markers: Marker[], nodraw?: boolean): void;
 
     /**
      * 추가된 마커 중 여러개의 마커를 삭제한다.
@@ -1128,48 +1128,48 @@ declare namespace kakao.maps {
      * @param markers 삭제할 마커 객체 배열
      * @param nodraw 클러스터 redraw 여부. true인 경우 클러스터를 다시 그리지 않는다.
      */
-    removeMarkers(markers: Marker[], nodraw?: boolean): void
+    removeMarkers(markers: Marker[], nodraw?: boolean): void;
 
     /**
      * 추가된 모든 마커를 삭제한다.
      */
-    clear(): void
+    clear(): void;
 
     /**
      * 클러스터를 다시 그린다. 주로 옵션을 변경한 이후 클러스터를 다시 그릴 때 사용한다.
      */
-    redraw(): void
+    redraw(): void;
 
     /**
      * 클러스터의 격자 크기를 반환한다.
      */
-    getGridSize(): number
+    getGridSize(): number;
 
     /**
      * 클러스터의 격자 크기를 설정한다. (단위 : 화면픽셀)
      *
      * @param size 격자 크기
      */
-    setGridSize(size: number): void
+    setGridSize(size: number): void;
 
     /**
      * 클러스터를 만들기 위해 필요한 최소 마커 개수를 반환한다.
      */
-    getMinClusterSize(): number
+    getMinClusterSize(): number;
 
     /**
      * 클러스터를 만들기 위해 필요한 최소 마커 개수를 설정한다.
      *
      * @param size 마커 개수
      */
-    setMinClusterSize(size: number): void
+    setMinClusterSize(size: number): void;
 
     /**
      * 현재 설정되어있는 클러스터 마커의 위치 결정 방식을 반환한다.
      * 반환 값이 true 일 경우 클러스터가 포함하는 마커들의 위치 평균값을 사용하고 있음을 의미하고
      * false 일 경우에는 기준이 되는 특정 마커의 위치를 사용하고 있음을 의미한다.
      */
-    getAverageCenter(): boolean
+    getAverageCenter(): boolean;
 
     /**
      * 현재 설정되어있는 클러스터 마커의 위치 결정 방식을 설정한다.
@@ -1178,24 +1178,24 @@ declare namespace kakao.maps {
      *
      * @param bool
      */
-    setAverageCenter(bool: boolean): void
+    setAverageCenter(bool: boolean): void;
 
     /**
      * 클러스터링 할 지도의 최소 레벨 값을 반환한다.
      */
-    getMinLevel(): number
+    getMinLevel(): number;
 
     /**
      * 클러스터링 할 지도의 최소 레벨 값을 설정한다.
      *
      * @param level 지도의 레벨
      */
-    setMinLevel(level: number): void
+    setMinLevel(level: number): void;
 
     /**
      * 클러스터 내부에 표시할 문자열의 배열 또는 문자열 생성 합수를 반환한다.
      */
-    getTexts(): string[] | ((size: number) => string[])
+    getTexts(): string[] | ((size: number) => string[]);
 
     /**
      * 클러스터 내부에 표시할 문자열 배열 또는 문자열 생성 함수를 설정한다.
@@ -1203,12 +1203,12 @@ declare namespace kakao.maps {
      * @see [클러스터 마커에 텍스트 표시하기 샘플보기](http://apis.map.kakao.com/web/sample/chickenClusterer)
      * @param texts 클러스터 내부에 표시할 문자열 배열 또는 문자열 생성 함수
      */
-    setTexts(texts: string[] | ((size: number) => string[])): void
+    setTexts(texts: string[] | ((size: number) => string[])): void;
 
     /**
      * 클러스터 크기를 구분하는 값을 가진 배열 혹은 구분값 생성 함수를 반환한다.
      */
-    getCalculator(): number[] | ((size: number) => number[])
+    getCalculator(): number[] | ((size: number) => number[]);
 
     /**
      * 클러스터 크기를 구분하는 값을 가진 배열 혹은 구분값 생성 함수를 설정한다.
@@ -1219,12 +1219,12 @@ declare namespace kakao.maps {
      * @see [클러스터 마커에 텍스트 표시하기 샘플보기](http://apis.map.kakao.com/web/sample/chickenClusterer)
      * @param calculator 클러스터의 크기를 구분하는 값의 배열 또는 구분값을 생성하는 함수
      */
-    setCalculator(calculator: number[] | ((size: number) => number[])): void
+    setCalculator(calculator: number[] | ((size: number) => number[])): void;
 
     /**
      * 클러스터 마커에 설정된 스타일 배열을 반환한다.
      */
-    getStyles(): object[]
+    getStyles(): object[];
 
     /**
      * 클러스터 마커에 스타일을 설정한다.
@@ -1232,7 +1232,7 @@ declare namespace kakao.maps {
      *
      * @param styles 클러스터 마커에 설정할 스타일 배열
      */
-    setStyles(styles: object[]): void
+    setStyles(styles: object[]): void;
 
     /**
      * 지도에 마커 클러스터러를 올린다.
@@ -1240,83 +1240,83 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    setMap(map: Map | null): void
+    setMap(map: Map | null): void;
 
     /**
      * 마커 클러스터러가 올라가있는 지도를 반환한다.
      */
-    getMap(): Map | null
+    getMap(): Map | null;
   }
 
   export interface MarkerClustererOptions {
     /**
      * 클러스터링 마커를 표시할 지도 객체
      */
-    map?: Map
+    map?: Map;
 
     /**
      * 클러스터링 할 마커 배열
      */
-    markers: Marker[]
+    markers: Marker[];
 
     /**
      * 클러스터의 격자 크기.
      * 화면 픽셀 단위이며 해당 격자 영역 안에 마커가 포함되면 클러스터에 포함시킨다 (default : 60)
      */
-    gridSize?: number
+    gridSize?: number;
 
     /**
      * 마커들의 좌표 평균을 클러스터 좌표 설정 여부 (default : false)
      */
-    averageCenter?: boolean
+    averageCenter?: boolean;
 
     /**
      * 클러스터링 할 지도의 최소 레벨 값.
      * 지정한 숫자에 해당하는 레벨 미만에서는 클러스터링 하지 않는다 (default : 0)
      */
-    minLevel?: number
+    minLevel?: number;
 
     /**
      * 클러스터링 할 최소 마커 수 (default: 2)
      */
-    minClusterSize?: number
+    minClusterSize?: number;
 
     /**
      * 클러스터의 스타일.
      * 여러개를 선언하면 calculator 로 구분된 사이즈 구간마다 서로 다른 스타일을 적용시킬 수 있다
      */
-    styles?: object[]
+    styles?: object[];
 
     /**
      *
      */
-    texts?: string[] | ((size: number) => string)
+    texts?: string[] | ((size: number) => string);
 
     /**
      * 클러스터 크기를 구분하는 값을 가진 배열 또는 구분값 생성함수
      * (default : [10, 100, 1000, 10000])
      */
-    calculator?: number[] | ((size: number) => number[])
+    calculator?: number[] | ((size: number) => number[]);
 
     /**
      * 클러스터 클릭 시 지도 확대 여부.
      * true로 설정하면 클러스터 클릭 시 확대 되지 않는다 (default: false)
      */
-    disableClickZoom?: boolean
+    disableClickZoom?: boolean;
 
     /**
      * 클러스터 클릭 가능 여부 지정 옵션.
      * false일 경우 클러스터의 clusterclick, clusterdblclick, clusterrightclick 이벤트가 발생하지 않으며,
      * 커서가 변경되지 않는다. (default: true)
      */
-    clickable?: boolean
+    clickable?: boolean;
 
     /**
      * 클러스터에 마우스 over/out 가능 여부 지정 옵션.
      * false일 경우 클러스터의 clusterover, clusterout 이벤트가 발생하지 않는다.
      * (default: true)
      */
-    hoverable?: boolean
+    hoverable?: boolean;
   }
 
   /**
@@ -1381,19 +1381,19 @@ declare namespace kakao.maps {
      * @param x
      * @param y
      */
-    constructor(x: number, y: number)
+    constructor(x: number, y: number);
 
     /**
      * 포인트 객체와 같은 좌표를 가지고 있는 객체인지 비교한다.
      *
      * @param point
      */
-    public equals(point: Point): boolean
+    public equals(point: Point): boolean;
 
     /**
      * 포인트 객체가 가지고 있는 좌표를 문자열로 반환한다.
      */
-    public toString(): string
+    public toString(): string;
   }
 
   /**
@@ -1405,7 +1405,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: PolygonOptions)
+    constructor(options: PolygonOptions);
 
     /**
      * 지도에 다각형을 올린다.
@@ -1413,19 +1413,19 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 다각형이 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 다각형의 옵션을 설정한다.
      *
      * @param options
      */
-    public setOptions(options: PolygonOptions): void
+    public setOptions(options: PolygonOptions): void;
 
     /**
      * 다각형의 경로를 지정한다.
@@ -1433,76 +1433,76 @@ declare namespace kakao.maps {
      *
      * @param path
      */
-    public setPath(path: LatLng[]): void
+    public setPath(path: LatLng[]): void;
 
     /**
      * 다각형의 경로를 반환한다.
      */
-    public getPath(): LatLng[]
+    public getPath(): LatLng[];
 
     /**
      * 다각형의 총 길이를 m(미터)단위로 반환한다.
      */
-    public getLength(): number
+    public getLength(): number;
 
     /**
      * 다각형으로 둘러싸인 영역의 넓이를 ㎡(제곱미터)단위로 반환한다.
      */
-    public getArea(): number
+    public getArea(): number;
 
     /**
      * 다각형의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 다각형의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
   }
 
   export interface PolygonOptions {
     /**
      * #xxxxxx 형태의 채움 색 (기본값: ‘#F10000’)
      */
-    fillColor?: string
+    fillColor?: string;
 
     /**
      * 채움 불투명도 (0-1) (기본값: 0)
      */
-    fillOpacity?: number
+    fillOpacity?: number;
 
     /**
      * 다각형을 구성하는 좌표의 배열 혹은 좌표 배열의 배열
      */
-    path: LatLng[] | LatLng[][]
+    path: LatLng[] | LatLng[][];
 
     /**
      * 픽셀 단위의 선 두께 (기본값: 3)
      */
-    strokeWeight?: number
+    strokeWeight?: number;
 
     /**
      * #xxxxxx 형태의 선 색 (기본값: ‘#F10000’)
      */
-    strokeColor?: string
+    strokeColor?: string;
 
     /**
      * 선 불투명도 (0-1) (기본값: 0.6)
      */
-    strokeOpacity?: number
+    strokeOpacity?: number;
 
     /**
      * 선 스타일 (기본값: ‘solid’)
      */
-    strokeStyle?: StrokeStyles
+    strokeStyle?: StrokeStyles;
 
     /**
      * 다각형의 z-index 속성 값
      */
-    zIndex?: number
+    zIndex?: number;
   }
 
   /**
@@ -1516,7 +1516,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: PolylineOptions)
+    constructor(options: PolylineOptions);
 
     /**
      * 지도에 폴리라인을 올린다.
@@ -1524,17 +1524,17 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 폴리라인이 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 폴리라인의 옵션을 설정한다.
      */
-    public setOptions(options: PolylineOptions): void
+    public setOptions(options: PolylineOptions): void;
 
     /**
      * 폴리라인의 경로를 지정한다.
@@ -1542,66 +1542,66 @@ declare namespace kakao.maps {
      *
      * @param path
      */
-    public setPath(path: LatLng[]): void
+    public setPath(path: LatLng[]): void;
 
     /**
      * 폴리라인의 경로를 반환한다.
      */
-    public getPath(): LatLng[]
+    public getPath(): LatLng[];
 
     /**
      * 폴리라인의 총 길이를 m(미터)단위로 반환한다.
      */
-    public getLength(): number
+    public getLength(): number;
 
     /**
      * 폴리라인의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 폴리라인의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
   }
 
   export interface PolylineOptions {
     /**
      * 화살표 여부
      */
-    endArrow?: boolean
+    endArrow?: boolean;
 
     /**
      * 폴리라인을 구성하는 좌표의 배열 또는 좌표 배열의 배열
      */
-    path: LatLng[] | LatLng[][]
+    path: LatLng[] | LatLng[][];
 
     /**
      * 픽셀 단위의 선 두께 (기본값: 3)
      */
-    strokeWeight?: number
+    strokeWeight?: number;
 
     /**
      * #xxxxxx 형태의 선 색 (기본값: ‘#F10000’)
      */
-    strokeColor?: string
+    strokeColor?: string;
 
     /**
      * 선 불투명도 (0-1) (기본값: 0.6)
      */
-    strokeOpacity?: number
+    strokeOpacity?: number;
 
     /**
      * 선 스타일 (기본값: ‘solid’)
      */
-    strokeStyle?: StrokeStyles
+    strokeStyle?: StrokeStyles;
 
     /**
      * 선의 z-index 속성 값
      */
-    zIndex?: number
+    zIndex?: number;
   }
 
   /**
@@ -1613,7 +1613,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    constructor(options: RectangleOptions)
+    constructor(options: RectangleOptions);
 
     /**
      * 지도에 사각형을 올린다.
@@ -1621,85 +1621,85 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 사각형이 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null
+    public getMap(): Map | null;
 
     /**
      * 사각형의 옵션을 설정한다.
      *
      * @param options
      */
-    public setOptions(options: RectangleOptions): void
+    public setOptions(options: RectangleOptions): void;
 
     /**
      * 사각형의 영역을 지정한다.
      *
      * @param bounds
      */
-    public setBounds(bounds: LatLngBounds): void
+    public setBounds(bounds: LatLngBounds): void;
 
     /**
      * 사각형의 영역을 반환한다.
      */
-    public getBounds(): LatLngBounds
+    public getBounds(): LatLngBounds;
 
     /**
      * 사각형의 z-index를 설정한다.
      *
      * @param zIndex
      */
-    public setZIndex(zIndex: number): void
+    public setZIndex(zIndex: number): void;
 
     /**
      * 사각형의 z-index를 반환한다.
      */
-    public getZIndex(): number
+    public getZIndex(): number;
   }
 
   export interface RectangleOptions {
     /**
      * 사각형의 영역
      */
-    bounds: LatLngBounds
+    bounds: LatLngBounds;
 
     /**
      * #xxxxxx 형태의 채움 색 (기본값: ‘#F10000’)
      */
-    fillColor?: string
+    fillColor?: string;
 
     /**
      * 채움 불투명도 (0-1) (기본값: 0)
      */
-    fillOpacity?: number
+    fillOpacity?: number;
 
     /**
      * 픽셀 단위의 선 두께 (기본값: 3)
      */
-    strokeWeight?: number
+    strokeWeight?: number;
 
     /**
      * #xxxxxx 형태의 선 색 (기본값: ‘#F10000’)
      */
-    strokeColor?: string
+    strokeColor?: string;
 
     /**
      * 선 불투명도 (0-1) (기본값: 0.6)
      */
-    strokeOpacity?: number
+    strokeOpacity?: number;
 
     /**
      * 선 스타일 (기본값: ‘solid’)
      */
-    strokeStyle?: StrokeStyles
+    strokeStyle?: StrokeStyles;
 
     /**
      * 사각형의 z-index 속성 값
      */
-    zIndex?: number
+    zIndex?: number;
   }
 
   /**
@@ -1712,19 +1712,19 @@ declare namespace kakao.maps {
      * @param width
      * @param height
      */
-    constructor(width: number, height: number)
+    constructor(width: number, height: number);
 
     /**
      * 사이즈 객체가 가지고 있는 크기와 같은 크기를 가지고 있는 객체인지 비교한다.
      *
      * @param size
      */
-    public equals(size: Size): boolean
+    public equals(size: Size): boolean;
 
     /**
      * 사이즈 객체가 가지고 있는 크기를 문자열로 반환한다.
      */
-    public toString(): string
+    public toString(): string;
   }
 
   // Miscellaneous
@@ -1738,7 +1738,7 @@ declare namespace kakao.maps {
    *
    * @see [load](http://apis.map.kakao.com/web/documentation/#load)
    */
-  export function load(callback: () => void): void
+  export function load(callback: () => void): void;
 
   /**
    * 고해상도 기기에서 HD 타일을 기본 타일로 사용하지 않도록 한다.
@@ -1747,7 +1747,7 @@ declare namespace kakao.maps {
    *
    * @see [disableHD](http://apis.map.kakao.com/web/documentation/#disableHD)
    */
-  export function disableHD(): void
+  export function disableHD(): void;
 
   /**
    * 지도 위에 올라가는 각종 도형의 선 스타일을 의미한다.
@@ -1756,17 +1756,17 @@ declare namespace kakao.maps {
    * @see [StrokeStyles](http://apis.map.kakao.com/web/documentation/#StrokeStyles)
    */
   export type StrokeStyles =
-    | 'solid'
-    | 'shortdash'
-    | 'shortdot'
-    | 'shortdashdot'
-    | 'shortdashdotdot'
-    | 'dot'
-    | 'dash'
-    | 'dashdot'
-    | 'longdash'
-    | 'longdashdot'
-    | 'longdashdotdot'
+    | "solid"
+    | "shortdash"
+    | "shortdot"
+    | "shortdashdot"
+    | "shortdashdotdot"
+    | "dot"
+    | "dash"
+    | "dashdot"
+    | "longdash"
+    | "longdashdot"
+    | "longdashdotdot";
 }
 
 /**
@@ -1788,8 +1788,8 @@ declare namespace kakao.maps.event {
   export function addListener(
     target: EventTarget,
     type: string,
-    handler: Function,
-  ): void
+    handler: Function
+  ): void;
 
   /**
    * 다음 지도 API 객체에 등록된 이벤트를 제거한다.
@@ -1801,8 +1801,8 @@ declare namespace kakao.maps.event {
   export function removeListener(
     target: EventTarget,
     type: string,
-    handler: Function,
-  ): void
+    handler: Function
+  ): void;
 
   /**
    * 다음 지도 API 객체에 등록된 이벤트를 발생시킨다.
@@ -1811,14 +1811,14 @@ declare namespace kakao.maps.event {
    * @param type 이벤트 이름
    * @param data 이벤트를 처리하는 함수에 넘길 변수
    */
-  export function trigger(target: EventTarget, type: string, data?: any): void
+  export function trigger(target: EventTarget, type: string, data?: any): void;
 
   /**
    * 다음 Map 객체의 이벤트를 막는다.
    * 보통 CustomOverlay의 content 혹은 외부 Element의 이벤트 핸들러에서 지도의 이벤트를 막고 싶을 경우 사용한다.
    * 이벤트의 핸들러 내부에서 이 함수를 사용하며, 이벤트의 핸들링이 끝나면 Map 객체의 이벤트는 다시 정상 동작하게 된다.
    */
-  export function preventMap(): void
+  export function preventMap(): void;
 
   /**
    * 마우스 이벤트로 넘겨 받는 인자
@@ -1830,12 +1830,12 @@ declare namespace kakao.maps.event {
     /**
      * 지도 좌표
      */
-    latLng?: LatLng
+    latLng?: LatLng;
 
     /**
      * 화면 좌표
      */
-    point?: Point
+    point?: Point;
   }
 }
 
@@ -1850,11 +1850,11 @@ declare namespace kakao.maps.services {
    * 또는 받을 출력 좌표계를 지정하기 위해 사용한다.
    */
   export enum Coords {
-    WGS84 = 'WGS84',
-    WCONGNAMUL = 'WCONGNAMUL',
-    CONGNAMUL = 'CONGNAMUL',
-    WTM = 'WTM',
-    TM = 'TM',
+    WGS84 = "WGS84",
+    WCONGNAMUL = "WCONGNAMUL",
+    CONGNAMUL = "CONGNAMUL",
+    WTM = "WTM",
+    TM = "TM",
   }
 
   /**
@@ -1883,30 +1883,30 @@ declare namespace kakao.maps.services {
             /**
              * 매칭된 문서수
              */
-            total_count: number
-          }
+            total_count: number;
+          };
           documents: Array<{
-            x: number
-            y: number
-          }>
+            x: number;
+            y: number;
+          }>;
         }>,
         /**
          * 응답 코드
          */
-        status: Status,
+        status: Status
       ) => void,
       options?: {
         /**
          * 입력 좌표 체계. 기본값은 WGS84
          */
-        input_coord?: Coords
+        input_coord?: Coords;
 
         /**
          * 출력 좌표 체계. 기본값은 WGS84
          */
-        output_coord?: Coords
-      },
-    ): void
+        output_coord?: Coords;
+      }
+    ): void;
   }
 
   /**
@@ -1918,12 +1918,12 @@ declare namespace kakao.maps.services {
     /**
      * 정확도 순
      */
-    ACCURACY = 'accuracy',
+    ACCURACY = "accuracy",
 
     /**
      * 거리 순
      */
-    DISTANCE = 'distance',
+    DISTANCE = "distance",
   }
 
   /**
@@ -1933,17 +1933,17 @@ declare namespace kakao.maps.services {
     /**
      * 서버 응답에 문제가 있는 경우
      */
-    ERROR = 'ERROR',
+    ERROR = "ERROR",
 
     /**
      * 검색 결과 있음
      */
-    OK = 'OK',
+    OK = "OK",
 
     /**
      * 정상적으로 응답 받았으나 검색 결과는 없음
      */
-    ZERO_RESULT = 'ZERO_RESULT',
+    ZERO_RESULT = "ZERO_RESULT",
   }
 
   /**
@@ -1957,14 +1957,14 @@ declare namespace kakao.maps.services {
      *
      * @param map 중심 좌표를 Places 객체의 location으로 설정할 지도 객체
      */
-    constructor(map?: Map)
+    constructor(map?: Map);
 
     /**
      * 지도 객체를 설정한다. 이미 설정되어 있는 지도는 `setMap(null)` 로 해제 가능하다.
      *
      * @param map 지도 객체
      */
-    public setMap(map: Map | null): void
+    public setMap(map: Map | null): void;
 
     /**
      * 입력한 키워드로 검색한다.
@@ -1978,10 +1978,10 @@ declare namespace kakao.maps.services {
       callback: (
         result: PlacesSearchResult,
         status: Status,
-        pagination: Pagination,
+        pagination: Pagination
       ) => void,
-      options?: PlacesSearchOptions,
-    ): void
+      options?: PlacesSearchOptions
+    ): void;
 
     /**
      * 주어진 카테고리 코드로 검색한다.
@@ -2001,235 +2001,342 @@ declare namespace kakao.maps.services {
       callback: (
         result: PlacesSearchResult,
         status: Status,
-        pagination: Pagination,
+        pagination: Pagination
       ) => void,
-      options?: PlacesSearchOptions,
-    ): void
+      options?: PlacesSearchOptions
+    ): void;
   }
 
-  export type PlacesSearchResult = PlacesSearchResultItem[]
+  export type PlacesSearchResult = PlacesSearchResultItem[];
 
   export interface PlacesSearchResultItem {
     /**
      * 장소 ID
      */
-    id: string
+    id: string;
 
     /**
      * 장소명, 업체명
      */
-    place_name: string
+    place_name: string;
 
     /**
      * 카테고리 이름
      * 예) 음식점 > 치킨
      */
-    category_name: string
+    category_name: string;
 
     /**
      * 중요 카테고리만 그룹핑한 카테고리 그룹 코드
      * 예) FD6
      */
-    category_group_code: CategoryGroupCode
+    category_group_code: CategoryGroupCode;
 
     /**
      * 중요 카테고리만 그룹핑한 카테고리 그룹명
      * 예) 음식점
      */
-    category_group_name: string
+    category_group_name: string;
 
     /**
      * 전화번호
      */
-    phone: string
+    phone: string;
 
     /**
      * 전체 지번 주소
      */
-    address_name: string
+    address_name: string;
 
     /**
      * 전체 도로명 주소
      */
-    road_address_name: string
+    road_address_name: string;
 
     /**
      * X 좌표값 혹은 longitude
      */
-    x: string
+    x: string;
 
     /**
      * Y 좌표값 혹은 latitude
      */
-    y: string
+    y: string;
 
     /**
      * 장소 상세페이지 URL
      */
-    place_url: string
+    place_url: string;
 
     /**
      * 중심좌표까지의 거리(x,y 파라미터를 준 경우에만 존재). 단위 meter
      */
-    distance: string
+    distance: string;
   }
 
   export interface PlacesSearchOptions {
     /**
      * 키워드 필터링을 위한 카테고리 코드
      */
-    category_group_code?: CategoryGroupCode
+    category_group_code?: CategoryGroupCode;
 
     /**
      * 중심 좌표. 특정 지역을 기준으로 검색한다.
      */
-    location?: LatLng
+    location?: LatLng;
 
     /**
      * x 좌표, longitude, `location` 값이 있으면 무시된다.
      */
-    x?: number
+    x?: number;
 
     /**
      * y 좌표, latitude, `location` 값이 있으면 무시된다.
      */
-    y?: number
+    y?: number;
 
     /**
      * 중심 좌표로부터의 거리(반경) 필터링 값. `location` / `x`, `y` / `useMapCenter` 중 하나와 같이 써야 의미가 있음. 미터(m) 단위. 기본값은 5000, 0~20000까지 가능
      */
-    radius?: number
+    radius?: number;
 
     /**
      * 검색할 사각형 영역
      */
-    bounds?: LatLngBounds
+    bounds?: LatLngBounds;
 
     /**
      * 사각 영역. 좌x,좌y,우x,우y 형태를 가짐. `bounds` 값이 있으면 무시된다.
      */
-    rect?: string
+    rect?: string;
 
     /**
      * 한 페이지에 보여질 목록 개수. 기본값은 15, 1~15까지 가능
      */
-    size?: number
+    size?: number;
 
     /**
      * 검색할 페이지. 기본값은 1, `size` 값에 따라 1~45까지 가능
      */
-    page?: number
+    page?: number;
 
     /**
      * 정렬 옵션. `DISTANCE` 일 경우 지정한 좌표값에 기반하여 동작함. 기본값은 `ACCURACY` (정확도 순)
      */
-    sort?: SortBy
+    sort?: SortBy;
 
     /**
      * 지정한 Map 객체의 중심 좌표를 사용할지의 여부. 참일 경우, `location` 속성은 무시된다. 기본값은 false
      */
-    useMapCenter?: boolean
+    useMapCenter?: boolean;
 
     /**
      * 지정한 Map 객체의 영역을 사용할지의 여부. 참일 경우, `bounds` 속성은 무시된다. 기본값은 false
      */
-    useMapBounds?: boolean
+    useMapBounds?: boolean;
   }
 
   export enum CategoryGroupCode {
     /**
      * 코드 미부여
      */
-    BLANK = '',
+    BLANK = "",
 
     /**
      * 대형마트
      */
-    MT1 = 'MT1',
+    MT1 = "MT1",
 
     /**
      * 편의점
      */
-    CS2 = 'CS2',
+    CS2 = "CS2",
 
     /**
      * 어린이집, 유치원
      */
-    PS3 = 'PS3',
+    PS3 = "PS3",
 
     /**
      * 학교
      */
-    SC4 = 'SC4',
+    SC4 = "SC4",
 
     /**
      * 학원
      */
-    AC5 = 'AC5',
+    AC5 = "AC5",
 
     /**
      * 주차장
      */
-    PK6 = 'PK6',
+    PK6 = "PK6",
 
     /**
      * 주유소, 충전소
      */
-    OL7 = 'OL7',
+    OL7 = "OL7",
 
     /**
      * 지하철역
      */
-    SW8 = 'SW8',
+    SW8 = "SW8",
 
     /**
      * 은행
      */
-    BK9 = 'BK9',
+    BK9 = "BK9",
 
     /**
      * 문화시설
      */
-    CT1 = 'CT1',
+    CT1 = "CT1",
 
     /**
      * 중개업소
      */
-    AG2 = 'AG2',
+    AG2 = "AG2",
 
     /**
      * 공공기관
      */
-    PO3 = 'PO3',
+    PO3 = "PO3",
 
     /**
      * 관광명소
      */
-    AT4 = 'AT4',
+    AT4 = "AT4",
 
     /**
      * 숙박
      */
-    AD5 = 'AD5',
+    AD5 = "AD5",
 
     /**
      * 음식점
      */
-    FD6 = 'FD6',
+    FD6 = "FD6",
 
     /**
      * 카페
      */
-    CE7 = 'CE7',
+    CE7 = "CE7",
 
     /**
      * 병원
      */
-    HP8 = 'HP8',
+    HP8 = "HP8",
 
     /**
      * 약국
      */
-    PM9 = 'PM9',
+    PM9 = "PM9",
+  }
+
+  /**
+   * @see [Roadview](http://apis.map.kakao.com/web/documentation/#Roadview)
+   */
+  export class Roadview implements kakao.maps.event.EventTarget {
+    /**
+     * 로드뷰를 생성한다.
+     *
+     * @param container 로드뷰가 표시될 HTML element
+     * @param options
+     */
+    constructor(container: HTMLElement, options: RoadviewOptions);
+
+    /**
+     * 파노라마 ID를 지정한다.
+     * 지도 좌표도 함께 넘겨야 한다.
+     *
+     * @param panoId
+     * @param position
+     */
+    setPanoId(panoId: number, position: LatLng): void;
+
+    /**
+     * 파노라마 ID를 반환한다.
+     */
+    getPanoId(): number;
+
+    /**
+     * 로드뷰 시점을 지정한다.
+     *
+     * @param viewpoint
+     */
+    setViewpoint(viewpoint: Viewpoint): void;
+
+    /**
+     * 로드뷰 시점을 반환한다.
+     */
+    getViewpoint(): Viewpoint;
+
+    /**
+     * 로드뷰 시점과panoId를 함께 반환한다.
+     */
+    getViewpointWithPanoId(): Viewpoint & { panoId: number };
+
+    /**
+     * 로드뷰가 보여주는 지점의 지도 좌표를 반환한다.
+     */
+    getPosition(): LatLng;
+
+    /**
+     * 로드뷰 엘리먼트의 크기를 변경한 후에는 반드시 이 함수를 호출해야 한다.
+     * 플래시 로드뷰는 자동으로 영역을 잡는 경우가 있으나 모바일 로드뷰는 꼭 호출하도록 하자.
+     * 단, window의 resize 이벤트에 대해서는 자동으로 호출된다.
+     */
+    relayout(): void;
+  }
+
+  export interface RoadviewOptions {
+    /**
+     * 로드뷰 시작 지역의 고유 아이디 값.
+     */
+    panoId?: number;
+
+    /**
+     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수평 좌표값.
+     */
+    panoX?: number;
+
+    /**
+     * panoId가 유효하지 않을 경우 지도좌표를 기반으로 데이터를 요청할 수직 좌표값.
+     */
+    panoY?: number;
+
+    /**
+     * 로드뷰 처음 실행시에 바라봐야 할 수평 각. 0이 정북방향. (0_360)
+     */
+    pan?: number;
+
+    /**
+     * 로드뷰 처음 실행시에 바라봐야 할 수직 각.(-90_90)
+     */
+    tilt?: number;
+
+    /**
+     * 로드뷰 줌 초기값.(-3_3)
+     */
+    zoom?: number;
+  }
+
+  /**
+   * @see [Viewpoint](https://apis.map.kakao.com/web/documentation/#Viewpoint)
+   */
+  export class Viewpoint {
+    pan: number;
+    tilt: number;
+    zoom: number;
+    panoId?: number;
+
+    /**
+     * 로드뷰를 생성한다.
+     * @param pan 가로 각도, 0부터 360 사이의 값으로 북쪽부터 시계방향으로 대응한다.
+     * @param tilt 세로 각도, -90부터 90 사이의 값으로 위쪽부터 아래쪽으로 대응한다.
+     * @param zoom 확대 수준, -3부터 3 사이의 정수이다.
+     * @param panoId 특정 위치의 로드뷰 고유의 아이디 값
+     */
+    constructor(pan: number, tilt: number, zoom: number, panoId?: number);
   }
 }
