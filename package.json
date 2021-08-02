@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Kakao Map API Type Definitions",
   "license": "MIT",
-  "private": true,
   "types": "index.d.ts",
   "bugs": {
     "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts/issues",
