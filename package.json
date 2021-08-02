@@ -6,11 +6,11 @@
   "private": true,
   "types": "index.d.ts",
   "bugs": {
-    "url": "https://github.com/Musma/daum.maps.d.ts/issues",
-    "email": "hyeonsoo.david.lee@gmail.com"
+    "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts/issues",
+    "email": "devjaeseo@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Musma/daum.maps.d.ts.git"
+    "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts.git"
   }
 }
