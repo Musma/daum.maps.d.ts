@@ -4,8 +4,8 @@
 // Definitions by: Hyeonsoo David Lee <https://github.com/civilizeddev>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+/// <reference path="maps.d.ts" />
 /// <reference path="event.d.ts" />
-/// <reference path="map.d.ts" />
 /// <reference path="services.d.ts" />
 
 /// <reference path="Circel.d.ts" />

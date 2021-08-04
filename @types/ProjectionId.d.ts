@@ -1,4 +1,5 @@
 /// <reference path="index.d.ts" />
+
 declare namespace kakao.maps {
   export interface ProjectionId {}
 }

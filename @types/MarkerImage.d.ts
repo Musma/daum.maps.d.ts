@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [MarkerImage](http://apis.map.kakao.com/web/documentation/#MarkerImage)
    */
-  export class MarkerImage implements kakao.maps.Marker {
+  export class MarkerImage {
     /**
      * 마커에 사용할 이미지를 생성한다.
      * 세 번째 파라메터로 offset을 사용할 경우 네 번째 파라메터로 shape, 다섯 번째 파라메터로 coords를 넣을 수 있다.
@@ -15,7 +15,7 @@ declare namespace kakao.maps {
     constructor(src: string, size: Size, options?: MarkerImageOptions);
   }
 
-  export interface MarkerImageOptions extends kakao.maps.MarkerOptions {
+  export interface MarkerImageOptions {
     /**
      * 마커 이미지의 alt 속성값을 정의한다.
      */
