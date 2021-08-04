@@ -2,14 +2,24 @@
   "name": "kakao.maps.d.ts",
   "version": "0.0.4",
   "description": "Kakao Map API Type Definitions",
-  "license": "MIT",
-  "types": "index.d.ts",
-  "bugs": {
-    "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts/issues",
-    "email": "devjaeseo@gmail.com"
+  "types": "@types/index.d.ts",
+  "dependencies": {
+    "kakao.maps.d.ts": "^0.0.1"
   },
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts.git"
-  }
+    "url": "git+https://github.com/JaeSeoKim/kakao.maps.d.ts.git"
+  },
+  "keywords": [
+    "kakao-maps-api",
+    "kakao.maps.d.ts",
+    "types"
+  ],
+  "author": "JaeSeoKim devjaeseo@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaeSeoKim/kakao.maps.d.ts/issues"
+  },
+  "homepage": "https://github.com/JaeSeoKim/kakao.maps.d.ts"
 }
