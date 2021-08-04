@@ -18,7 +18,7 @@ declare namespace kakao.maps {
      *
      * @param latlng
      */
-    public pointFromCoords(latlng: LatLng, altitude: number): Viewpoint;
+    public viewpointFromCoords(latlng: LatLng, altitude: number): Viewpoint;
 
     /**
      * 위치 좌표(pixel)에 해당하는 지도 좌표를 반환한다.

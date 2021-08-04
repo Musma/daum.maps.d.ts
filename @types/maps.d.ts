@@ -1,28 +1,4 @@
 /// <reference path="index.d.ts" />
-/// <reference path="Circel.d.ts" />
-/// <reference path="Cluster.d.ts" />
-/// <reference path="Coords.d.ts" />
-/// <reference path="CustomOverlay.d.ts" />
-/// <reference path="LatLng.d.ts" />
-/// <reference path="LatLngBounds.d.ts" />
-/// <reference path="Map.d.ts" />
-/// <reference path="MapProjection.d.ts" />
-/// <reference path="MapTypeId.d.ts" />
-/// <reference path="Marker.d.ts" />
-/// <reference path="MarkerClusterer.d.ts" />
-/// <reference path="MarkerImage.d.ts" />
-/// <reference path="Pagination.d.ts" />
-/// <reference path="Point.d.ts" />
-/// <reference path="Polygon.d.ts" />
-/// <reference path="Polyline.d.ts" />
-/// <reference path="ProjectionId.d.ts" />
-/// <reference path="Rectangle.d.ts" />
-/// <reference path="Roadview.d.ts" />
-/// <reference path="RoadviewOverlay.d.ts" />
-/// <reference path="Size.d.ts" />
-/// <reference path="StrokeStyles.d.ts" />
-/// <reference path="Viewpoint.d.ts" />
-
 declare namespace kakao.maps {
   /**
    * v3 스크립트를 동적으로 로드하기위해 사용한다.
