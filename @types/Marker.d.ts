@@ -165,7 +165,7 @@ declare namespace kakao.maps {
     /**
      * 마커의 좌표 또는 로드뷰에서의 시점
      */
-    position: LatLng;
+    position: LatLng | Viewpoint;
 
     /**
      * 마커의 이미지

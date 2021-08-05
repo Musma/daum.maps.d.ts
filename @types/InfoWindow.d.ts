@@ -96,7 +96,7 @@ declare namespace kakao.maps {
     /**
      * 인포윈도우의 좌표
      */
-    position: LatLng;
+    position: LatLng | Viewpoint;
 
     /**
      * 인포윈도우가 올라갈 지도 또는 로드뷰
