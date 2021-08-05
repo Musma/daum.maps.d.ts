@@ -34,7 +34,7 @@ declare namespace kakao.maps {
     /**
      * 마커의 클릭 또는 마우스오버 가능한 영역의 모양
      */
-    shape?: string;
+    shape?: "default" | "rect" | "circle" | "poly";
 
     /**
      * 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
