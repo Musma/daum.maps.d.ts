@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [MarkerClusterer](http://apis.map.kakao.com/web/documentation/#MarkerClusterer)
    */
-  export class MarkerClusterer extends kakao.maps.event.EventTarget {
+  export class MarkerClusterer implements kakao.maps.event.EventTarget {
     /**
      * 마커 클러스터링을 담당하는 객체.
      * clusterer 라이브러리를 별도 로드 해야 사용 가능하다.

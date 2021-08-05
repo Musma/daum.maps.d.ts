@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [Polygon](http://apis.map.kakao.com/web/documentation/#Polygon)
    */
-  export class Polygon extends kakao.maps.event.EventTarget {
+  export class Polygon implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 다각형을 생성한다.
      *

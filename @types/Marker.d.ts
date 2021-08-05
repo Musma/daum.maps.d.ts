@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [Marker](http://apis.map.kakao.com/web/documentation/#Marker)
    */
-  export class Marker extends kakao.maps.event.EventTarget {
+  export class Marker implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 마커를 생성한다.
      * 지도 뿐만 아니라 로드뷰 위에도 올릴 수 있다.

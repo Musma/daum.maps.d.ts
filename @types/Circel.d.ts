@@ -4,7 +4,7 @@ declare namespace kakao.maps {
   /**
    * @see [Circle](http://apis.map.kakao.com/web/documentation/#Circle)
    */
-  export class Circle extends kakao.maps.event.EventTarget {
+  export class Circle implements kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 원을 생성한다.
      *
