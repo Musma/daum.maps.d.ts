@@ -92,15 +92,16 @@ declare namespace kakao.maps {
      */
     content: string | HTMLElement;
 
-    /**
-     * 인포윈도우가 올라갈 지도 또는 로드뷰
-     */
-    map: Map | Roadview;
 
     /**
      * 인포윈도우의 좌표
      */
     position: LatLng;
+
+    /**
+     * 인포윈도우가 올라갈 지도 또는 로드뷰
+     */
+    map?: Map | Roadview;
 
     /**
      * 인포윈도우를 열 때 지도가 자동으로 패닝하지 않을지의 여부 (기본값: false)
