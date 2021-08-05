@@ -15,7 +15,7 @@ declare namespace kakao.maps {
      * marker가 주어지면, 해당 마커에서 열린 효과를 낸다.
      * 로드뷰에서도 같은 동작을 한다.
      */
-    public open(map_or_roadview: Map | RoadView, marker?: Marker);
+    public open(map_or_roadview: Map | Roadview, marker?: Marker): void;
 
     /**
      * 인포윈도우를 제거한다.
@@ -64,7 +64,7 @@ declare namespace kakao.maps {
      * 로드뷰상에서 인포윈도우의 높이(위치)를 지정한다.
      * 단위는 m(미터)이며 현재 로드뷰의 바닥 높이를 기준으로 떨어져있는 높이를 말한다.
      */
-    public setAltitude(altitude): void;
+    public setAltitude(altitude: number): void;
 
     /**
      * 인포윈도우의 높이(위치)를 반환한다.
