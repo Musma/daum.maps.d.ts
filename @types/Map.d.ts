@@ -4,7 +4,7 @@ declare namespace kakao.maps {
   /**
    * @see [Map](http://apis.map.kakao.com/web/documentation/#Map)
    */
-  export class Map implements kakao.maps.event.EventTarget {
+  export class Map extends kakao.maps.event.EventTarget {
     /**
      * 지도를 생성한다.
      *

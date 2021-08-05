@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [Roadview](http://apis.map.kakao.com/web/documentation/#Roadview)
    */
-  export class Roadview implements kakao.maps.event.EventTarget {
+  export class Roadview extends kakao.maps.event.EventTarget {
     /**
      * 로드뷰를 생성한다.
      *

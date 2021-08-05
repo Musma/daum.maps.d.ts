@@ -5,7 +5,7 @@ declare namespace kakao.maps {
    *
    * @see [Polyline](http://apis.map.kakao.com/web/documentation/#Polyline)
    */
-  export class Polyline implements kakao.maps.event.EventTarget {
+  export class Polyline extends kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 폴리라인을 생성한다.
      *

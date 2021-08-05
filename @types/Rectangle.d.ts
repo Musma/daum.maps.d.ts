@@ -3,7 +3,7 @@ declare namespace kakao.maps {
   /**
    * @see [Rectangle](http://apis.map.kakao.com/web/documentation/#Rectangle)
    */
-  export class Rectangle implements kakao.maps.event.EventTarget {
+  export class Rectangle extends kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 사각형를 생성한다.
      *

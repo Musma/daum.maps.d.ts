@@ -4,7 +4,7 @@ declare namespace kakao.maps {
   /**
    * @see [CustomOverlay](http://apis.map.kakao.com/web/documentation/#CustomOverlay)
    */
-  export class CustomOverlay implements kakao.maps.event.EventTarget {
+  export class CustomOverlay extends kakao.maps.event.EventTarget {
     /**
      * 주어진 객체로 커스텀 오버레이를 생성한다.
      * 지도 뿐만 아니라 로드뷰 위에도 올릴 수 있다.

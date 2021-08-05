@@ -7,7 +7,23 @@ declare namespace kakao.maps.event {
   /**
    * 이벤트를 지원하는 다음 지도 API 객체
    */
-  export interface EventTarget {}
+  export class EventTarget {
+    /**
+     * 다음 지도 API 객체에 이벤트를 등록한다.
+     *
+     * @param type 이벤트 이름
+     * @param handler 이벤트를 처리할 함수
+     */
+    public addEventListener(type: string, handler: Function): void;
+
+    /**
+     * 다음 지도 API 객체에 이벤트를 제거한다.
+     *
+     * @param type 이벤트 이름
+     * @param handler 이벤트를 처리하던 함수
+     */
+    public addEventListener(type: string, handler: Function): void;
+  }
 
   /**
    * 다음 지도 API 객체에 이벤트를 등록한다.
@@ -57,7 +73,7 @@ declare namespace kakao.maps.event {
    *
    * @see [MouseEvent](http://apis.map.kakao.com/web/documentation/#MouseEvent)
    */
-  export interface MouseEvent {
+  export interface MouseEvent extends Event {
     /**
      * 지도 좌표
      */
