@@ -22,7 +22,7 @@ declare namespace kakao.maps.event {
      * @param type 이벤트 이름
      * @param handler 이벤트를 처리하던 함수
      */
-    public addEventListener(type: string, handler: Function): void;
+    public removeEventListener(type: string, handler: Function): void;
   }
 
   /**
