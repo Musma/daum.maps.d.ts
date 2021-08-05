@@ -18,12 +18,12 @@ declare namespace kakao.maps {
      *
      * @param map
      */
-    public setMap(map: Map | null): void;
+    public setMap(map: Map | LoadView | null): void;
 
     /**
      * 마커가 올라가있는 지도를 반환한다.
      */
-    public getMap(): Map | null;
+    public getMap(): Map | LoadView | null;
 
     /**
      * 마커에 새 MarkerImage를 지정한다.
@@ -49,7 +49,7 @@ declare namespace kakao.maps {
     /**
      * 마커의 좌표를 반환한다.
      */
-    public getPosition(): LatLng;
+    public getPosition(): LatLng | Viewpoint;
 
     /**
      * 마커의 z-index를 설정한다.
@@ -160,7 +160,7 @@ declare namespace kakao.maps {
     /**
      * 마커가 올라갈 지도 또는 로드뷰
      */
-    map?: Map;
+    map?: Map | LoadView | LoadView;
 
     /**
      * 마커의 좌표 또는 로드뷰에서의 시점
