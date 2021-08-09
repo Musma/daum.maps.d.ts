@@ -35,7 +35,7 @@ declare namespace kakao.maps {
      */
     public setLevel(
       level: number,
-      options: {
+      options?: {
         /**
          * 지도 확대수준 변경 시 애니메이션 효과 여부
          * (현재 지도 레벨과의 차이가 2 이하인 경우에만 애니메이션 효과 가능)
