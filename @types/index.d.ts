@@ -12,6 +12,7 @@
 /// <reference path="Cluster.d.ts" />
 /// <reference path="Coords.d.ts" />
 /// <reference path="CustomOverlay.d.ts" />
+/// <reference path="Ellipse.d.ts" />
 /// <reference path="InfoWindow.d.ts" />
 /// <reference path="LatLng.d.ts" />
 /// <reference path="LatLngBounds.d.ts" />

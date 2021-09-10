@@ -29,7 +29,14 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    public setOptions(options: PolygonOptions): void;
+    public setOptions(
+      options: PolygonOptions & {
+        /**
+         * 폴리라인을 구성하는 좌표의 배열 또는 좌표 배열의 배열
+         */
+        path?: LatLng[] | LatLng[][];
+      }
+    ): void;
 
     /**
      * 다각형의 경로를 지정한다.
@@ -37,12 +44,12 @@ declare namespace kakao.maps {
      *
      * @param path
      */
-    public setPath(path: LatLng[]): void;
+    public setPath(path: LatLng[] | LatLng[][]): void;
 
     /**
      * 다각형의 경로를 반환한다.
      */
-    public getPath(): LatLng[];
+    public getPath(): LatLng[] | LatLng[][];
 
     /**
      * 다각형의 총 길이를 m(미터)단위로 반환한다.

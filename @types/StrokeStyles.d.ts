@@ -13,6 +13,7 @@ declare namespace kakao.maps {
     | "shortdashdotdot"
     | "dot"
     | "dash"
+    | "dashed"
     | "dashdot"
     | "longdash"
     | "longdashdot"

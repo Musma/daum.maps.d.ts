@@ -29,7 +29,14 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    public setOptions(options: RectangleOptions): void;
+    public setOptions(
+      options: RectangleOptions & {
+        /**
+         * 사각형의 영역
+         */
+        bounds?: LatLngBounds;
+      }
+    ): void;
 
     /**
      * 사각형의 영역을 지정한다.
