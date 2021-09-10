@@ -86,7 +86,7 @@ declare namespace kakao.maps {
     public getZIndex(): number;
   }
 
-  interface setEllipseOptions extends Ellipse {
+  interface setEllipseOptions extends EllipseOptions {
     /**
      * 중심 좌표
      */
@@ -121,10 +121,12 @@ declare namespace kakao.maps {
      * 미터 단위의 x축 반지름
      */
     rx: number;
+
     /**
      * 미터 단위의 y축 반지름
      */
     ry: number;
+
     /**
      * 픽셀 단위의 선 두께 (기본값: 3)
      */
