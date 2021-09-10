@@ -29,14 +29,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    public setOptions(
-      options: RectangleOptions & {
-        /**
-         * 사각형의 영역
-         */
-        bounds?: LatLngBounds;
-      }
-    ): void;
+    public setOptions(options: setRectangleOptions): void;
 
     /**
      * 사각형의 영역을 지정한다.
@@ -61,6 +54,13 @@ declare namespace kakao.maps {
      * 사각형의 z-index를 반환한다.
      */
     public getZIndex(): number;
+  }
+
+  export interface setRectangleOptions extends RectangleOptions {
+    /**
+     * 사각형의 영역
+     */
+    bounds?: LatLngBounds;
   }
 
   export interface RectangleOptions {

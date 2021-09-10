@@ -28,22 +28,7 @@ declare namespace kakao.maps {
     /**
      * 타원의 옵션을 설정한다.
      */
-    public setOptions(
-      options: EllipseOptions & {
-        /**
-         * 중심 좌표
-         */
-        center?: LatLng;
-        /**
-         * 미터 단위의 x축 반지름
-         */
-        rx?: number;
-        /**
-         * 미터 단위의 y축 반지름
-         */
-        ry?: number;
-      }
-    ): void;
+    public setOptions(options: setEllipseOptions): void;
 
     /**
      * 타원의 중심 좌표를 지정한다.
@@ -99,6 +84,21 @@ declare namespace kakao.maps {
      * 타원의 z-index를 반환한다.
      */
     public getZIndex(): number;
+  }
+
+  interface setEllipseOptions extends Ellipse {
+    /**
+     * 중심 좌표
+     */
+    center?: LatLng;
+    /**
+     * 미터 단위의 x축 반지름
+     */
+    rx?: number;
+    /**
+     * 미터 단위의 y축 반지름
+     */
+    ry?: number;
   }
 
   export interface EllipseOptions {

@@ -29,14 +29,7 @@ declare namespace kakao.maps {
     /**
      * 폴리라인의 옵션을 설정한다.
      */
-    public setOptions(
-      options: PolylineOptions & {
-        /**
-         * 폴리라인을 구성하는 좌표의 배열 또는 좌표 배열의 배열
-         */
-        path?: LatLng[] | LatLng[][];
-      }
-    ): void;
+    public setOptions(options: setPolylineOptions): void;
 
     /**
      * 폴리라인의 경로를 지정한다.
@@ -67,6 +60,13 @@ declare namespace kakao.maps {
      * 폴리라인의 z-index를 반환한다.
      */
     public getZIndex(): number;
+  }
+
+  export interface setPolylineOptions extends PolylineOptions {
+    /**
+     * 폴리라인을 구성하는 좌표의 배열 혹은 좌표 배열의 배열
+     */
+    path?: LatLng[] | LatLng[][];
   }
 
   export interface PolylineOptions {

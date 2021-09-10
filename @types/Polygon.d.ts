@@ -29,14 +29,7 @@ declare namespace kakao.maps {
      *
      * @param options
      */
-    public setOptions(
-      options: PolygonOptions & {
-        /**
-         * 폴리라인을 구성하는 좌표의 배열 또는 좌표 배열의 배열
-         */
-        path?: LatLng[] | LatLng[][];
-      }
-    ): void;
+    public setOptions(options: setPolygonOptions): void;
 
     /**
      * 다각형의 경로를 지정한다.
@@ -74,6 +67,12 @@ declare namespace kakao.maps {
     public getZIndex(): number;
   }
 
+  export interface setPolygonOptions extends PolygonOptions {
+    /**
+     * 다각형을 구성하는 좌표의 배열 혹은 좌표 배열의 배열
+     */
+    path?: LatLng[] | LatLng[][];
+  }
   export interface PolygonOptions {
     /**
      * #xxxxxx 형태의 채움 색 (기본값: ‘#F10000’)

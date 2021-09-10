@@ -28,18 +28,7 @@ declare namespace kakao.maps {
     /**
      * 원의 옵션을 설정한다.
      */
-    public setOptions(
-      options: CircleOptions & {
-        /**
-         * 중심 좌표
-         */
-        center?: LatLng;
-        /**
-         * 미터 단위의 반지름
-         */
-        radius?: number;
-      }
-    ): void;
+    public setOptions(options: setCircleOptions): void;
 
     /**
      * 원의 중심 좌표를 지정한다.
@@ -81,6 +70,17 @@ declare namespace kakao.maps {
      * 원의 z-index를 반환한다.
      */
     public getZIndex(): number;
+  }
+
+  interface setCircleOptions extends CircleOptions {
+    /**
+     * 중심 좌표
+     */
+    center?: LatLng;
+    /**
+     * 미터 단위의 반지름
+     */
+    radius?: number;
   }
 
   export interface CircleOptions {
