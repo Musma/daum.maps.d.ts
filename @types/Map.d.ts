@@ -40,7 +40,7 @@ declare namespace kakao.maps {
          * 지도 확대수준 변경 시 애니메이션 효과 여부
          * (현재 지도 레벨과의 차이가 2 이하인 경우에만 애니메이션 효과 가능)
          */
-        animate:
+        animate?:
           | boolean
           | {
               /**
@@ -51,7 +51,7 @@ declare namespace kakao.maps {
         /**
          * 지도 확대수준 변경 시 기준 좌표
          */
-        anchor: LatLng;
+        anchor?: LatLng;
       }
     ): void;
 
@@ -144,14 +144,17 @@ declare namespace kakao.maps {
      * @param control
      * @param position
      */
-    public addControl(control: MapTypeControl | ZoomControl, position: ControlPosition): void
+    public addControl(
+      control: MapTypeControl | ZoomControl,
+      position: ControlPosition
+    ): void;
 
     /**
      * 지도에서 컨트롤을 제거한다.
      *
      * @param control
      */
-    public removeControl(control: MapTypeControl | ZoomControl): void
+    public removeControl(control: MapTypeControl | ZoomControl): void;
 
     /**
      * 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 설정한다.
