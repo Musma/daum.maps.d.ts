@@ -32,3 +32,6 @@
 /// <reference path="Size.d.ts" />
 /// <reference path="StrokeStyles.d.ts" />
 /// <reference path="Viewpoint.d.ts" />
+/// <reference path="MapTypeControl.d.ts" />
+/// <reference path="ZoomControl.d.ts" />
+/// <reference path="ControlPosition.d.ts" />

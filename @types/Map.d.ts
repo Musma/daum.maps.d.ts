@@ -144,14 +144,14 @@ declare namespace kakao.maps {
      * @param control
      * @param position
      */
-    // public addControl(control: MapTypeControl | ZoomControl, position: ControlPosition): void
+    public addControl(control: MapTypeControl | ZoomControl, position: ControlPosition): void
 
     /**
      * 지도에서 컨트롤을 제거한다.
      *
      * @param control
      */
-    // public removeControl(control: MapTypeControl | ZoomControl): void
+    public removeControl(control: MapTypeControl | ZoomControl): void
 
     /**
      * 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 설정한다.
