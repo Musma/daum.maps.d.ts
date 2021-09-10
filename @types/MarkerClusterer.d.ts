@@ -118,7 +118,7 @@ declare namespace kakao.maps {
      * @see [클러스터 마커에 텍스트 표시하기 샘플보기](http://apis.map.kakao.com/web/sample/chickenClusterer)
      * @param texts 클러스터 내부에 표시할 문자열 배열 또는 문자열 생성 함수
      */
-    setTexts(texts: string[] | ((size: number) => string[])): void;
+    setTexts(texts: string[] | ((size: number) => string)): void;
 
     /**
      * 클러스터 크기를 구분하는 값을 가진 배열 혹은 구분값 생성 함수를 반환한다.
@@ -172,7 +172,7 @@ declare namespace kakao.maps {
     /**
      * 클러스터링 할 마커 배열
      */
-    markers: Marker[];
+    markers?: Marker[];
 
     /**
      * 클러스터의 격자 크기.
@@ -203,13 +203,14 @@ declare namespace kakao.maps {
     styles?: object[];
 
     /**
-     *
+     * 클러스터에 표시할 문자열 또는 문자열 생성 함수.
+     * @default "클러스터에 포함된 숫자"
      */
-    texts?: string[] | ((size: number) => string);
 
+    texts?: string[] | ((size: number) => string);
     /**
      * 클러스터 크기를 구분하는 값을 가진 배열 또는 구분값 생성함수
-     * (default : [10, 100, 1000, 10000])
+     * @default [10, 100, 1000, 10000]
      */
     calculator?: number[] | ((size: number) => number[]);
 
