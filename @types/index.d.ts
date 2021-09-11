@@ -36,3 +36,5 @@
 /// <reference path="MapTypeControl.d.ts" />
 /// <reference path="ZoomControl.d.ts" />
 /// <reference path="ControlPosition.d.ts" />
+/// <reference path="Tileset.d.ts" />
+/// <reference path="TilesetCopyright.d.ts" />
