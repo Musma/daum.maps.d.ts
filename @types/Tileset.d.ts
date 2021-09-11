@@ -51,7 +51,7 @@ declare namespace kakao.maps {
      *
      * @default []
      */
-    copyright?: kakao.maps.TilesetCopyright[];
+    copyright?: TilesetCopyright[];
     /**
      * 어두운 타일인지 여부
      */

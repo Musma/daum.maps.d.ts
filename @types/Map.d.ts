@@ -18,12 +18,12 @@ declare namespace kakao.maps {
      *
      * @param latlng
      */
-    public setCenter(latlng: LatLng): void;
+    public setCenter(latlng: LatLng | Coords): void;
 
     /**
      * 지도의 중심 좌표를 반환한다.
      */
-    public getCenter(): LatLng;
+    public getCenter(): LatLng | Coords;
 
     /**
      * 지도의 확대 수준을 설정한다.
@@ -134,7 +134,7 @@ declare namespace kakao.maps {
      * @param padding
      */
     public panTo(
-      latlng_or_bounds: LatLng | LatLngBounds,
+      latlng_or_bounds: LatLng | LatLngBounds | Coords,
       padding?: number
     ): void;
 
@@ -253,7 +253,7 @@ declare namespace kakao.maps {
     /**
      * 중심 좌표 (필수)
      */
-    center: LatLng;
+    center: LatLng | Coords;
 
     /**
      * 확대 수준 (기본값: 3)
