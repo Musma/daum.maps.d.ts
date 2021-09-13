@@ -247,6 +247,11 @@ declare namespace kakao.maps {
      * @param style
      */
     public setCursor(style: string): void;
+
+    /**
+     * 지도가 그려지고 있는 HTMLElement 를 반환 합니다.
+     */
+    public getNode(): HTMLElement;
   }
 
   export interface MapOptions {
