@@ -38,3 +38,5 @@
 /// <reference path="ControlPosition.d.ts" />
 /// <reference path="Tileset.d.ts" />
 /// <reference path="TilesetCopyright.d.ts" />
+/// <reference path="MapPanels.d.ts" />
+/// <reference path="AbstractOverlay.d.ts" />
