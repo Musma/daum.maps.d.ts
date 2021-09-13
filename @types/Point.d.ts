@@ -5,6 +5,15 @@ declare namespace kakao.maps {
    */
   export class Point {
     /**
+     * 화면 좌표 정보를 담고 있는 포인트 X 좌표 정보를 가지고 있는 변수 입니다.
+     */
+    x: number;
+    /**
+     * 화면 좌표 정보를 담고 있는 포인트 Y 좌표 정보를 가지고 있는 변수 입니다.
+     */
+    y: number;
+
+    /**
      * 화면 좌표 정보를 담고 있는 포인트 객체를 생성한다.
      *
      * @param x
