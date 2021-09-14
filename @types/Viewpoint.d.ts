@@ -16,7 +16,7 @@ declare namespace kakao.maps {
      * @param zoom 확대 수준, -3부터 3 사이의 정수이다.
      * @param panoId 특정 위치의 로드뷰 고유의 아이디 값
      */
-    constructor(pan: number, tilt: number, zoom: number, panoId?: number);
+    constructor(pan: number, tilt: number, zoom?: number, panoId?: number);
   }
 
   /**
