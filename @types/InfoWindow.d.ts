@@ -37,7 +37,7 @@ declare namespace kakao.maps {
     /**
      * 인포윈도우의 좌표를 반환한다.
      */
-    public getPosition(): LatLng | Viewpoint;
+    public getPosition(): LatLng;
 
     /**
      * 인포윈도우의 내용을 지정한다.

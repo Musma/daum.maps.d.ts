@@ -49,7 +49,7 @@ declare namespace kakao.maps {
     /**
      * 마커의 좌표를 반환한다.
      */
-    public getPosition(): LatLng | Viewpoint;
+    public getPosition(): LatLng;
 
     /**
      * 마커의 z-index를 설정한다.
