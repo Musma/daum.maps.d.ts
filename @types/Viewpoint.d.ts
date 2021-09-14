@@ -6,7 +6,7 @@ declare namespace kakao.maps {
   export class Viewpoint {
     pan: number;
     tilt: number;
-    zoom: number;
+    zoom?: number;
     panoId?: number;
 
     /**
@@ -17,8 +17,6 @@ declare namespace kakao.maps {
      * @param panoId 특정 위치의 로드뷰 고유의 아이디 값
      */
     constructor(pan: number, tilt: number, zoom: number, panoId?: number);
-
-
   }
 
   /**
