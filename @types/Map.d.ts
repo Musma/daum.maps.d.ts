@@ -23,7 +23,7 @@ declare namespace kakao.maps {
     /**
      * 지도의 중심 좌표를 반환한다.
      */
-    public getCenter(): LatLng | Coords;
+    public getCenter(): LatLng;
 
     /**
      * 지도의 확대 수준을 설정한다.
